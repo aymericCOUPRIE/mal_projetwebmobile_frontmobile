@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCDE6B1C25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE6B1B25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift */; };
+		BCDE6B1E25F9745100F710DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE6B1D25F9745100F710DE /* ContentView.swift */; };
+		BCDE6B2025F9745200F710DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCDE6B1F25F9745200F710DE /* Assets.xcassets */; };
+		BCDE6B2325F9745200F710DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCDE6B2225F9745200F710DE /* Preview Assets.xcassets */; };
+		BCDE6B2E25F9745200F710DE /* mal_projetwebmobile_frontmobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE6B2D25F9745200F710DE /* mal_projetwebmobile_frontmobileTests.swift */; };
+		BCDE6B3925F9745200F710DE /* mal_projetwebmobile_frontmobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE6B3825F9745200F710DE /* mal_projetwebmobile_frontmobileUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCDE6B2A25F9745200F710DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCDE6B1025F9745100F710DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCDE6B1725F9745100F710DE;
+			remoteInfo = mal_projetwebmobile_frontmobile;
+		};
+		BCDE6B3525F9745200F710DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCDE6B1025F9745100F710DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCDE6B1725F9745100F710DE;
+			remoteInfo = mal_projetwebmobile_frontmobile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BCDE6B1825F9745100F710DE /* mal_projetwebmobile_frontmobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mal_projetwebmobile_frontmobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCDE6B1B25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mal_projetwebmobile_frontmobileApp.swift; sourceTree = "<group>"; };
+		BCDE6B1D25F9745100F710DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BCDE6B1F25F9745200F710DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCDE6B2225F9745200F710DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BCDE6B2425F9745200F710DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCDE6B2925F9745200F710DE /* mal_projetwebmobile_frontmobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mal_projetwebmobile_frontmobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCDE6B2D25F9745200F710DE /* mal_projetwebmobile_frontmobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mal_projetwebmobile_frontmobileTests.swift; sourceTree = "<group>"; };
+		BCDE6B2F25F9745200F710DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCDE6B3425F9745200F710DE /* mal_projetwebmobile_frontmobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mal_projetwebmobile_frontmobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCDE6B3825F9745200F710DE /* mal_projetwebmobile_frontmobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mal_projetwebmobile_frontmobileUITests.swift; sourceTree = "<group>"; };
+		BCDE6B3A25F9745200F710DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCDE6B1525F9745100F710DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCDE6B2625F9745200F710DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCDE6B3125F9745200F710DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCDE6B0F25F9745100F710DE = {
+			isa = PBXGroup;
+			children = (
+				BCDE6B1A25F9745100F710DE /* mal_projetwebmobile_frontmobile */,
+				BCDE6B2C25F9745200F710DE /* mal_projetwebmobile_frontmobileTests */,
+				BCDE6B3725F9745200F710DE /* mal_projetwebmobile_frontmobileUITests */,
+				BCDE6B1925F9745100F710DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCDE6B1925F9745100F710DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCDE6B1825F9745100F710DE /* mal_projetwebmobile_frontmobile.app */,
+				BCDE6B2925F9745200F710DE /* mal_projetwebmobile_frontmobileTests.xctest */,
+				BCDE6B3425F9745200F710DE /* mal_projetwebmobile_frontmobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCDE6B1A25F9745100F710DE /* mal_projetwebmobile_frontmobile */ = {
+			isa = PBXGroup;
+			children = (
+				BCDE6B1B25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift */,
+				BCDE6B1D25F9745100F710DE /* ContentView.swift */,
+				BCDE6B1F25F9745200F710DE /* Assets.xcassets */,
+				BCDE6B2425F9745200F710DE /* Info.plist */,
+				BCDE6B2125F9745200F710DE /* Preview Content */,
+			);
+			path = mal_projetwebmobile_frontmobile;
+			sourceTree = "<group>";
+		};
+		BCDE6B2125F9745200F710DE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BCDE6B2225F9745200F710DE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BCDE6B2C25F9745200F710DE /* mal_projetwebmobile_frontmobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCDE6B2D25F9745200F710DE /* mal_projetwebmobile_frontmobileTests.swift */,
+				BCDE6B2F25F9745200F710DE /* Info.plist */,
+			);
+			path = mal_projetwebmobile_frontmobileTests;
+			sourceTree = "<group>";
+		};
+		BCDE6B3725F9745200F710DE /* mal_projetwebmobile_frontmobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BCDE6B3825F9745200F710DE /* mal_projetwebmobile_frontmobileUITests.swift */,
+				BCDE6B3A25F9745200F710DE /* Info.plist */,
+			);
+			path = mal_projetwebmobile_frontmobileUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCDE6B1725F9745100F710DE /* mal_projetwebmobile_frontmobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCDE6B3D25F9745200F710DE /* Build configuration list for PBXNativeTarget "mal_projetwebmobile_frontmobile" */;
+			buildPhases = (
+				BCDE6B1425F9745100F710DE /* Sources */,
+				BCDE6B1525F9745100F710DE /* Frameworks */,
+				BCDE6B1625F9745100F710DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mal_projetwebmobile_frontmobile;
+			productName = mal_projetwebmobile_frontmobile;
+			productReference = BCDE6B1825F9745100F710DE /* mal_projetwebmobile_frontmobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BCDE6B2825F9745200F710DE /* mal_projetwebmobile_frontmobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCDE6B4025F9745200F710DE /* Build configuration list for PBXNativeTarget "mal_projetwebmobile_frontmobileTests" */;
+			buildPhases = (
+				BCDE6B2525F9745200F710DE /* Sources */,
+				BCDE6B2625F9745200F710DE /* Frameworks */,
+				BCDE6B2725F9745200F710DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCDE6B2B25F9745200F710DE /* PBXTargetDependency */,
+			);
+			name = mal_projetwebmobile_frontmobileTests;
+			productName = mal_projetwebmobile_frontmobileTests;
+			productReference = BCDE6B2925F9745200F710DE /* mal_projetwebmobile_frontmobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BCDE6B3325F9745200F710DE /* mal_projetwebmobile_frontmobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCDE6B4325F9745200F710DE /* Build configuration list for PBXNativeTarget "mal_projetwebmobile_frontmobileUITests" */;
+			buildPhases = (
+				BCDE6B3025F9745200F710DE /* Sources */,
+				BCDE6B3125F9745200F710DE /* Frameworks */,
+				BCDE6B3225F9745200F710DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCDE6B3625F9745200F710DE /* PBXTargetDependency */,
+			);
+			name = mal_projetwebmobile_frontmobileUITests;
+			productName = mal_projetwebmobile_frontmobileUITests;
+			productReference = BCDE6B3425F9745200F710DE /* mal_projetwebmobile_frontmobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCDE6B1025F9745100F710DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					BCDE6B1725F9745100F710DE = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					BCDE6B2825F9745200F710DE = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = BCDE6B1725F9745100F710DE;
+					};
+					BCDE6B3325F9745200F710DE = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = BCDE6B1725F9745100F710DE;
+					};
+				};
+			};
+			buildConfigurationList = BCDE6B1325F9745100F710DE /* Build configuration list for PBXProject "mal_projetwebmobile_frontmobile" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCDE6B0F25F9745100F710DE;
+			productRefGroup = BCDE6B1925F9745100F710DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCDE6B1725F9745100F710DE /* mal_projetwebmobile_frontmobile */,
+				BCDE6B2825F9745200F710DE /* mal_projetwebmobile_frontmobileTests */,
+				BCDE6B3325F9745200F710DE /* mal_projetwebmobile_frontmobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCDE6B1625F9745100F710DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCDE6B2325F9745200F710DE /* Preview Assets.xcassets in Resources */,
+				BCDE6B2025F9745200F710DE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCDE6B2725F9745200F710DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCDE6B3225F9745200F710DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCDE6B1425F9745100F710DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCDE6B1E25F9745100F710DE /* ContentView.swift in Sources */,
+				BCDE6B1C25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCDE6B2525F9745200F710DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCDE6B2E25F9745200F710DE /* mal_projetwebmobile_frontmobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCDE6B3025F9745200F710DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCDE6B3925F9745200F710DE /* mal_projetwebmobile_frontmobileUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCDE6B2B25F9745200F710DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCDE6B1725F9745100F710DE /* mal_projetwebmobile_frontmobile */;
+			targetProxy = BCDE6B2A25F9745200F710DE /* PBXContainerItemProxy */;
+		};
+		BCDE6B3625F9745200F710DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCDE6B1725F9745100F710DE /* mal_projetwebmobile_frontmobile */;
+			targetProxy = BCDE6B3525F9745200F710DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BCDE6B3B25F9745200F710DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BCDE6B3C25F9745200F710DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCDE6B3E25F9745200F710DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"mal_projetwebmobile_frontmobile/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = mal_projetwebmobile_frontmobile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mal.mal-projetwebmobile-frontmobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BCDE6B3F25F9745200F710DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"mal_projetwebmobile_frontmobile/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = mal_projetwebmobile_frontmobile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mal.mal-projetwebmobile-frontmobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BCDE6B4125F9745200F710DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = mal_projetwebmobile_frontmobileTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mal.mal-projetwebmobile-frontmobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mal_projetwebmobile_frontmobile.app/mal_projetwebmobile_frontmobile";
+			};
+			name = Debug;
+		};
+		BCDE6B4225F9745200F710DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = mal_projetwebmobile_frontmobileTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mal.mal-projetwebmobile-frontmobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mal_projetwebmobile_frontmobile.app/mal_projetwebmobile_frontmobile";
+			};
+			name = Release;
+		};
+		BCDE6B4425F9745200F710DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = mal_projetwebmobile_frontmobileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mal.mal-projetwebmobile-frontmobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mal_projetwebmobile_frontmobile;
+			};
+			name = Debug;
+		};
+		BCDE6B4525F9745200F710DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = mal_projetwebmobile_frontmobileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mal.mal-projetwebmobile-frontmobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mal_projetwebmobile_frontmobile;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCDE6B1325F9745100F710DE /* Build configuration list for PBXProject "mal_projetwebmobile_frontmobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCDE6B3B25F9745200F710DE /* Debug */,
+				BCDE6B3C25F9745200F710DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCDE6B3D25F9745200F710DE /* Build configuration list for PBXNativeTarget "mal_projetwebmobile_frontmobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCDE6B3E25F9745200F710DE /* Debug */,
+				BCDE6B3F25F9745200F710DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCDE6B4025F9745200F710DE /* Build configuration list for PBXNativeTarget "mal_projetwebmobile_frontmobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCDE6B4125F9745200F710DE /* Debug */,
+				BCDE6B4225F9745200F710DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCDE6B4325F9745200F710DE /* Build configuration list for PBXNativeTarget "mal_projetwebmobile_frontmobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCDE6B4425F9745200F710DE /* Debug */,
+				BCDE6B4525F9745200F710DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCDE6B1025F9745100F710DE /* Project object */;
+}
