@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditorListView: View {
     
-    private let intent : EditorIntent
+    private let intent : EditorListViewIntent
     private let url : String = "http://localhost:3000/server/festivals/gameByEditor"
     
     var body: some View {

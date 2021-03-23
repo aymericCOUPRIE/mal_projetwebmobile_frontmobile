@@ -31,8 +31,20 @@ class EditorVM: Identifiable, Equatable {
         lhs.j_id == rhs.j_id
     }
 
-    
-    @ObservedObject private(set) var model: Editor    
+    @ObservedObject private(set) var model: Editor
+
+    @Published var editorListState: EditorListState = .ready{
+        didSet {
+            switch self.editorListState {
+            case .loaded(data):
+                self.model.new(editors: data)
+            case .loadingError:
+                print("LOADING ERROR")
+            default:
+                return
+            }
+        }
+    }
     
     var j_id: Int {
         return model.j_id
@@ -44,6 +56,11 @@ class EditorVM: Identifiable, Equatable {
     
     init(_ editor: Editor) {
         self.model = editor
+    }
+    
+    
+    func new(editors: [Editor]) {
+        self.model.new(editors: editors)
     }
     
     

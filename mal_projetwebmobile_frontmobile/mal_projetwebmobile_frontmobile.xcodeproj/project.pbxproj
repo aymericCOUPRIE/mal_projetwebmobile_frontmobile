@@ -25,8 +25,10 @@
 		BCDE6B3925F9745200F710DE /* mal_projetwebmobile_frontmobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE6B3825F9745200F710DE /* mal_projetwebmobile_frontmobileUITests.swift */; };
 		BCE8CE22260A41B80047CB27 /* EditorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8CE21260A41B80047CB27 /* EditorVM.swift */; };
 		BCE8CE27260A421C0047CB27 /* Editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8CE26260A421C0047CB27 /* Editor.swift */; };
-		BCE8CE35260A454B0047CB27 /* EditorIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8CE34260A454B0047CB27 /* EditorIntent.swift */; };
+		BCE8CE35260A454B0047CB27 /* EditorListViewIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8CE34260A454B0047CB27 /* EditorListViewIntent.swift */; };
 		BCE8CE3D260A4F720047CB27 /* EditorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8CE3C260A4F720047CB27 /* EditorList.swift */; };
+		BCE8CE47260A5C2E0047CB27 /* ServerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8CE46260A5C2E0047CB27 /* ServerHelper.swift */; };
+		BCE8CE4F260A67210047CB27 /* InOutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8CE4E260A67210047CB27 /* InOutHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +73,10 @@
 		BCDE6B3A25F9745200F710DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE8CE21260A41B80047CB27 /* EditorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorVM.swift; sourceTree = "<group>"; };
 		BCE8CE26260A421C0047CB27 /* Editor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Editor.swift; sourceTree = "<group>"; };
-		BCE8CE34260A454B0047CB27 /* EditorIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorIntent.swift; sourceTree = "<group>"; };
+		BCE8CE34260A454B0047CB27 /* EditorListViewIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorListViewIntent.swift; sourceTree = "<group>"; };
 		BCE8CE3C260A4F720047CB27 /* EditorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorList.swift; sourceTree = "<group>"; };
+		BCE8CE46260A5C2E0047CB27 /* ServerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerHelper.swift; sourceTree = "<group>"; };
+		BCE8CE4E260A67210047CB27 /* InOutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InOutHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 		BCDE6B1A25F9745100F710DE /* mal_projetwebmobile_frontmobile */ = {
 			isa = PBXGroup;
 			children = (
+				BCE8CE45260A5BC30047CB27 /* Utils */,
 				BCE8CE33260A452D0047CB27 /* Intent */,
 				93835FC125FE09A0003C2167 /* Models */,
 				93835FC025FE0994003C2167 /* ViewModels */,
@@ -199,9 +204,18 @@
 		BCE8CE33260A452D0047CB27 /* Intent */ = {
 			isa = PBXGroup;
 			children = (
-				BCE8CE34260A454B0047CB27 /* EditorIntent.swift */,
+				BCE8CE34260A454B0047CB27 /* EditorListViewIntent.swift */,
 			);
 			path = Intent;
+			sourceTree = "<group>";
+		};
+		BCE8CE45260A5BC30047CB27 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BCE8CE46260A5C2E0047CB27 /* ServerHelper.swift */,
+				BCE8CE4E260A67210047CB27 /* InOutHelper.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,17 +352,19 @@
 				93D894622609EBD20089ECB0 /* GameListView.swift in Sources */,
 				93D8946C2609EC040089ECB0 /* ZoneListView.swift in Sources */,
 				BCE8CE27260A421C0047CB27 /* Editor.swift in Sources */,
-				BCE8CE35260A454B0047CB27 /* EditorIntent.swift in Sources */,
+				BCE8CE35260A454B0047CB27 /* EditorListViewIntent.swift in Sources */,
 				93D8947E2609EE510089ECB0 /* GameVM.swift in Sources */,
 				BCE8CE22260A41B80047CB27 /* EditorVM.swift in Sources */,
 				93D894242600B87A0089ECB0 /* KeyboardResponder.swift in Sources */,
 				93D8942C26011E350089ECB0 /* LoginView.swift in Sources */,
 				93D894762609EE450089ECB0 /* Game.swift in Sources */,
+				BCE8CE4F260A67210047CB27 /* InOutHelper.swift in Sources */,
 				93D894712609EDD90089ECB0 /* HostingTabBar.swift in Sources */,
 				93D894672609EBF10089ECB0 /* EditorListView.swift in Sources */,
 				93D8943F260143C30089ECB0 /* MotherView.swift in Sources */,
 				BCE8CE3D260A4F720047CB27 /* EditorList.swift in Sources */,
 				93D8944E2601462B0089ECB0 /* ViewRouter.swift in Sources */,
+				BCE8CE47260A5C2E0047CB27 /* ServerHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
