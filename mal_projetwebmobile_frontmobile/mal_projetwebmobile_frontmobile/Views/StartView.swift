@@ -17,6 +17,7 @@ struct StartView: View {
             VStack {
                 WelcomeText()
                 LogoImage()
+                /*
                 WhoAreYouText()
                //lien vers page login si organisateur
                 Button(action: {
@@ -31,6 +32,7 @@ struct StartView: View {
                }){
                 visiteurButtonContent()
                 }
+ */
                 
             }.padding()
             

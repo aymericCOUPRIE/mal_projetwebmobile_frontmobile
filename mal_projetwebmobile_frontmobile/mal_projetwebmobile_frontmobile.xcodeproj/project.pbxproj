@@ -11,6 +11,12 @@
 		93D8942C26011E350089ECB0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8942B26011E350089ECB0 /* LoginView.swift */; };
 		93D8943F260143C30089ECB0 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8943E260143C30089ECB0 /* MotherView.swift */; };
 		93D8944E2601462B0089ECB0 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8944D2601462B0089ECB0 /* ViewRouter.swift */; };
+		93D894622609EBD20089ECB0 /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D894612609EBD20089ECB0 /* GameListView.swift */; };
+		93D894672609EBF10089ECB0 /* EditorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D894662609EBF10089ECB0 /* EditorListView.swift */; };
+		93D8946C2609EC040089ECB0 /* ZoneListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8946B2609EC040089ECB0 /* ZoneListView.swift */; };
+		93D894712609EDD90089ECB0 /* HostingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D894702609EDD90089ECB0 /* HostingTabBar.swift */; };
+		93D894762609EE450089ECB0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D894752609EE450089ECB0 /* Game.swift */; };
+		93D8947E2609EE510089ECB0 /* GameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8947D2609EE510089ECB0 /* GameVM.swift */; };
 		BCDE6B1C25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE6B1B25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift */; };
 		BCDE6B1E25F9745100F710DE /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE6B1D25F9745100F710DE /* StartView.swift */; };
 		BCDE6B2025F9745200F710DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCDE6B1F25F9745200F710DE /* Assets.xcassets */; };
@@ -41,6 +47,12 @@
 		93D8942B26011E350089ECB0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		93D8943E260143C30089ECB0 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
 		93D8944D2601462B0089ECB0 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		93D894612609EBD20089ECB0 /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
+		93D894662609EBF10089ECB0 /* EditorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorListView.swift; sourceTree = "<group>"; };
+		93D8946B2609EC040089ECB0 /* ZoneListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneListView.swift; sourceTree = "<group>"; };
+		93D894702609EDD90089ECB0 /* HostingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingTabBar.swift; sourceTree = "<group>"; };
+		93D894752609EE450089ECB0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		93D8947D2609EE510089ECB0 /* GameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVM.swift; sourceTree = "<group>"; };
 		BCDE6B1825F9745100F710DE /* mal_projetwebmobile_frontmobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mal_projetwebmobile_frontmobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCDE6B1B25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mal_projetwebmobile_frontmobileApp.swift; sourceTree = "<group>"; };
 		BCDE6B1D25F9745100F710DE /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -86,6 +98,9 @@
 				93D8943E260143C30089ECB0 /* MotherView.swift */,
 				BCDE6B1D25F9745100F710DE /* StartView.swift */,
 				93D8942B26011E350089ECB0 /* LoginView.swift */,
+				93D894612609EBD20089ECB0 /* GameListView.swift */,
+				93D894662609EBF10089ECB0 /* EditorListView.swift */,
+				93D8946B2609EC040089ECB0 /* ZoneListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -93,6 +108,7 @@
 		93835FC025FE0994003C2167 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				93D8947D2609EE510089ECB0 /* GameVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -100,6 +116,7 @@
 		93835FC125FE09A0003C2167 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				93D894752609EE450089ECB0 /* Game.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,6 +149,7 @@
 				93835FBF25FE0982003C2167 /* Views */,
 				BCDE6B1B25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift */,
 				93D8944D2601462B0089ECB0 /* ViewRouter.swift */,
+				93D894702609EDD90089ECB0 /* HostingTabBar.swift */,
 				93D894232600B87A0089ECB0 /* KeyboardResponder.swift */,
 				BCDE6B1F25F9745200F710DE /* Assets.xcassets */,
 				BCDE6B2425F9745200F710DE /* Info.plist */,
@@ -297,8 +315,14 @@
 			files = (
 				BCDE6B1E25F9745100F710DE /* StartView.swift in Sources */,
 				BCDE6B1C25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift in Sources */,
+				93D894622609EBD20089ECB0 /* GameListView.swift in Sources */,
+				93D8946C2609EC040089ECB0 /* ZoneListView.swift in Sources */,
+				93D8947E2609EE510089ECB0 /* GameVM.swift in Sources */,
 				93D894242600B87A0089ECB0 /* KeyboardResponder.swift in Sources */,
 				93D8942C26011E350089ECB0 /* LoginView.swift in Sources */,
+				93D894762609EE450089ECB0 /* Game.swift in Sources */,
+				93D894712609EDD90089ECB0 /* HostingTabBar.swift in Sources */,
+				93D894672609EBF10089ECB0 /* EditorListView.swift in Sources */,
 				93D8943F260143C30089ECB0 /* MotherView.swift in Sources */,
 				93D8944E2601462B0089ECB0 /* ViewRouter.swift in Sources */,
 			);
