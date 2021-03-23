@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+
+struct Game: Codable {
+    private(set) var j_id: Int
+    private(set) var j_titre: String
+    private(set) var j_duree: String //PAS DE TYPE STRING
+    private(set) var j_nbMaxJoueur: Int
+    private(set) var j_nbMinJoueurs: Int
+    private(set) var j_lienNotice: String
+    
+    private(set) var soc_nom: String
+}
+
+

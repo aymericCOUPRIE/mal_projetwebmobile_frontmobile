@@ -23,6 +23,7 @@
 		BCDE6B2325F9745200F710DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCDE6B2225F9745200F710DE /* Preview Assets.xcassets */; };
 		BCDE6B2E25F9745200F710DE /* mal_projetwebmobile_frontmobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE6B2D25F9745200F710DE /* mal_projetwebmobile_frontmobileTests.swift */; };
 		BCDE6B3925F9745200F710DE /* mal_projetwebmobile_frontmobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE6B3825F9745200F710DE /* mal_projetwebmobile_frontmobileUITests.swift */; };
+		BCE4F49D2609F34B007A499B /* Editeur.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4F49C2609F34B007A499B /* Editeur.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		BCDE6B3425F9745200F710DE /* mal_projetwebmobile_frontmobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mal_projetwebmobile_frontmobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCDE6B3825F9745200F710DE /* mal_projetwebmobile_frontmobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mal_projetwebmobile_frontmobileUITests.swift; sourceTree = "<group>"; };
 		BCDE6B3A25F9745200F710DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCE4F49C2609F34B007A499B /* Editeur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editeur.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				93D894752609EE450089ECB0 /* Game.swift */,
+				BCE4F49C2609F34B007A499B /* Editeur.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				93D894712609EDD90089ECB0 /* HostingTabBar.swift in Sources */,
 				93D894672609EBF10089ECB0 /* EditorListView.swift in Sources */,
 				93D8943F260143C30089ECB0 /* MotherView.swift in Sources */,
+				BCE4F49D2609F34B007A499B /* Editeur.swift in Sources */,
 				93D8944E2601462B0089ECB0 /* ViewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
