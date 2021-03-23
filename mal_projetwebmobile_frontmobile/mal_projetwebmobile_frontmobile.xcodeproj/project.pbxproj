@@ -29,6 +29,7 @@
 		BCE8CE3D260A4F720047CB27 /* EditorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8CE3C260A4F720047CB27 /* EditorList.swift */; };
 		BCE8CE47260A5C2E0047CB27 /* ServerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8CE46260A5C2E0047CB27 /* ServerHelper.swift */; };
 		BCE8CE4F260A67210047CB27 /* InOutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8CE4E260A67210047CB27 /* InOutHelper.swift */; };
+		BCE8CE54260A6A140047CB27 /* EditorListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE8CE53260A6A140047CB27 /* EditorListVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		BCE8CE3C260A4F720047CB27 /* EditorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorList.swift; sourceTree = "<group>"; };
 		BCE8CE46260A5C2E0047CB27 /* ServerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerHelper.swift; sourceTree = "<group>"; };
 		BCE8CE4E260A67210047CB27 /* InOutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InOutHelper.swift; sourceTree = "<group>"; };
+		BCE8CE53260A6A140047CB27 /* EditorListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorListVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				93D8947D2609EE510089ECB0 /* GameVM.swift */,
 				BCE8CE21260A41B80047CB27 /* EditorVM.swift */,
+				BCE8CE53260A6A140047CB27 /* EditorListVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				93D8946C2609EC040089ECB0 /* ZoneListView.swift in Sources */,
 				BCE8CE27260A421C0047CB27 /* Editor.swift in Sources */,
 				BCE8CE35260A454B0047CB27 /* EditorListViewIntent.swift in Sources */,
+				BCE8CE54260A6A140047CB27 /* EditorListVM.swift in Sources */,
 				93D8947E2609EE510089ECB0 /* GameVM.swift in Sources */,
 				BCE8CE22260A41B80047CB27 /* EditorVM.swift in Sources */,
 				93D894242600B87A0089ECB0 /* KeyboardResponder.swift in Sources */,

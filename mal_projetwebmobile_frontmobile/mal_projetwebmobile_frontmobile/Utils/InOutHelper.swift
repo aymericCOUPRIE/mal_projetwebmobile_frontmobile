@@ -123,13 +123,15 @@ class InOutHelper {
         getJsonData(from: url, endofrequest: endofrequest)
     }
 
+    /*
     static func fileGetJsonData<T: Decodable>(filename: String, endofrequest: @escaping (Result<T,HttpRequestError>) -> Void){
-        guard let url = Bundle.main.url(forResource: PlaylistApp.filename, withExtension: nil) else {
+        guard let url = Bundle.main.url(forResource: mal_projetwebmobile_frontmobileApp.filename, withExtension: nil) else {
             endofrequest(.failure(.badURL(filename)))
             return
         }
         getJsonData(from: url, endofrequest: endofrequest)
     }
+ */
 
     
     // -------------------------------------------------------------------------------------------------------------------------------

@@ -13,8 +13,14 @@ struct EditorsListData: Codable {
 }
 
 struct EditorData: Codable {
-    var j_id: Int
+    var j_id: Int //A supprimer plus tard
     var nomEditeur: String
+    var listGames: [GameData]
+}
+
+struct GameData: Codable {
+    var j_id: Int
+    var j_title: String
 }
 
 struct ServerHelper {
@@ -36,7 +42,7 @@ struct ServerHelper {
             endofrequest(.failure(.badURL(surl)))
             return
         }
-        self.loadTracksFromAPI(url: url, endofrequest: endofrequest)
+        self.loadEditorsFromAPI(url: url, endofrequest: endofrequest)
     }
     
     static func loadEditorsFromAPI(url: URL, endofrequest: @escaping (Result<[Editor], HttpRequestError>) -> Void){

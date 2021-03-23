@@ -17,6 +17,9 @@ struct MotherView: View {
    
     @EnvironmentObject var viewRouter: ViewRouter //pour que notre vue observe le ViewRouter
     
+    @StateObject var editorList : EditorListVM = EditorListVM(EditorList())
+
+    
     var body: some View {
         VStack{
             switch viewRouter.currentPage {
@@ -26,7 +29,7 @@ struct MotherView: View {
                 LoginView()
                 
             case .HostingTabBar:
-                HostingTabBar()
+                HostingTabBar(editorList: editorList)
             }
             
         }

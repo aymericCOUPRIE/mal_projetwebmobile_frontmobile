@@ -9,9 +9,12 @@ import SwiftUI
 
 
 struct TabBarApp: App {
+    
+    @StateObject var editorList : EditorListVM = EditorListVM(EditorList())
+    
     var body: some Scene {
         WindowGroup{
-            HostingTabBar()
+            HostingTabBar(editorList: editorList)
         }
     }
 }
@@ -25,6 +28,14 @@ struct HostingTabBar: View {
     }
     
     @State private var selectedTab: Tab = .home
+    
+    @ObservedObject var editorList: EditorListVM
+    var intent: EditorListViewIntent
+    
+    init(editorList: EditorListVM) {
+        self.editorList = editorList
+        self.intent = EditorListViewIntent(editorList: editorList)
+    }
     
     var body: some View{
         TabView(selection: $selectedTab){
@@ -41,7 +52,7 @@ struct HostingTabBar: View {
                     Image(systemName: "die.face.5")
                 }
             
-            EditorListView()
+            EditorListView(intent: self.intent)
                 .tag(2)
                 .tabItem{
                     Text("Éditeurs")
@@ -62,6 +73,6 @@ struct HostingTabBar: View {
 
 struct HostingTabBar_Previews: PreviewProvider {
     static var previews: some View {
-        HostingTabBar()
+        HostingTabBar(editorList: EditorListVM(EditorList()))
     }
 }

@@ -9,13 +9,13 @@ import SwiftUI
 
 struct EditorListView: View {
     
-    private let intent : EditorListViewIntent
-    private let url : String = "http://localhost:3000/server/festivals/gameByEditor"
+    var intent : EditorListViewIntent
+    var url : String = "http://localhost:3000/server/festivals/gameByEditor"
     
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         
-        loadEditor()
+        //loadEditor()
     }
     
     func loadEditor() {
@@ -25,6 +25,6 @@ struct EditorListView: View {
 
 struct EditorListView_Previews: PreviewProvider {
     static var previews: some View {
-        EditorListView()
+        EditorListView(intent: EditorListViewIntent(editorList: EditorListVM(EditorList())))
     }
 }
