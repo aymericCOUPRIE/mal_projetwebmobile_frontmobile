@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct EditorListView: View {
+    
+    private let intent : EditorIntent
+    private let url : String = "http://localhost:3000/server/festivals/gameByEditor"
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        loadEditor()
+    }
+    
+    func loadEditor() {
+        self.intent.loadEditorList(url: url)
     }
 }
 
