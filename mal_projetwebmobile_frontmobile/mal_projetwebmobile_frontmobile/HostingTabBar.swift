@@ -38,20 +38,20 @@ struct HostingTabBar: View {
                 .tag(1)
                 .tabItem{
                     Text("Jeux")
-                    Image(systemName: "house.fill")
+                    Image(systemName: "die.face.5")
                 }
             
             EditorListView()
                 .tag(2)
                 .tabItem{
                     Text("Éditeurs")
-                    Image(systemName: "house.fill")
+                    Image(systemName: "person.2.square.stack")
                 }
             ZoneListView()
                 .tag(3)
                 .tabItem{
                     Text("Zones")
-                    Image(systemName: "house.fill")
+                    Image(systemName: "map")
                 }
         }
     }
