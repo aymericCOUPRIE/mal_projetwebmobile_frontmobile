@@ -10,6 +10,7 @@ import SwiftUI
 enum Page {
     case startView
     case loginView
+    case HostingTabBar
 }
 
 struct MotherView: View {
@@ -23,6 +24,9 @@ struct MotherView: View {
                 StartView()
                 case .loginView:
                 LoginView()
+                
+            case .HostingTabBar:
+                HostingTabBar()
             }
             
         }

@@ -9,6 +9,6 @@ import Foundation
 import SwiftUI
 
 class ViewRouter: ObservableObject {
-    @Published var currentPage: Page = .startView //startView = valeur par défaut
+    @Published var currentPage: Page = .HostingTabBar//startView = valeur par défaut
     //@Published pour que les vues qui observent viewRouter soient notifiées des changements et mises à jour
 }

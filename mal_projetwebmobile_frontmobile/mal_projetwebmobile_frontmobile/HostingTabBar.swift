@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct TabBarApp: App {
     var body: some Scene {
         WindowGroup{
@@ -26,7 +27,33 @@ struct HostingTabBar: View {
     @State private var selectedTab: Tab = .home
     
     var body: some View{
-        
+        TabView(selection: $selectedTab){
+            StartView()
+                .tag(0)
+                .tabItem{
+                    Text("Acceuil")
+                    Image(systemName: "house.fill")
+                }
+            GameListView()
+                .tag(1)
+                .tabItem{
+                    Text("Jeux")
+                    Image(systemName: "house.fill")
+                }
+            
+            EditorListView()
+                .tag(2)
+                .tabItem{
+                    Text("Éditeurs")
+                    Image(systemName: "house.fill")
+                }
+            ZoneListView()
+                .tag(3)
+                .tabItem{
+                    Text("Zones")
+                    Image(systemName: "house.fill")
+                }
+        }
     }
     
 }
