@@ -17,6 +17,7 @@
 		93D894712609EDD90089ECB0 /* HostingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D894702609EDD90089ECB0 /* HostingTabBar.swift */; };
 		93D894762609EE450089ECB0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D894752609EE450089ECB0 /* Game.swift */; };
 		93D8947E2609EE510089ECB0 /* GameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8947D2609EE510089ECB0 /* GameVM.swift */; };
+		93D89495260B92120089ECB0 /* EditorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D89494260B92120089ECB0 /* EditorItem.swift */; };
 		BCDE6B1C25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE6B1B25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift */; };
 		BCDE6B1E25F9745100F710DE /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE6B1D25F9745100F710DE /* StartView.swift */; };
 		BCDE6B2025F9745200F710DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCDE6B1F25F9745200F710DE /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		93D894702609EDD90089ECB0 /* HostingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingTabBar.swift; sourceTree = "<group>"; };
 		93D894752609EE450089ECB0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		93D8947D2609EE510089ECB0 /* GameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVM.swift; sourceTree = "<group>"; };
+		93D89494260B92120089ECB0 /* EditorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorItem.swift; sourceTree = "<group>"; };
 		BCDE6B1825F9745100F710DE /* mal_projetwebmobile_frontmobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mal_projetwebmobile_frontmobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCDE6B1B25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mal_projetwebmobile_frontmobileApp.swift; sourceTree = "<group>"; };
 		BCDE6B1D25F9745100F710DE /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -109,12 +111,12 @@
 		93835FBF25FE0982003C2167 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				93D89493260B91F20089ECB0 /* Zone */,
+				93D89492260B91E60089ECB0 /* Game */,
+				93D89491260B91C60089ECB0 /* Editor */,
 				93D8943E260143C30089ECB0 /* MotherView.swift */,
 				BCDE6B1D25F9745100F710DE /* StartView.swift */,
 				93D8942B26011E350089ECB0 /* LoginView.swift */,
-				93D894612609EBD20089ECB0 /* GameListView.swift */,
-				93D894662609EBF10089ECB0 /* EditorListView.swift */,
-				93D8946B2609EC040089ECB0 /* ZoneListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -137,6 +139,31 @@
 				BCE8CE3C260A4F720047CB27 /* EditorList.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		93D89491260B91C60089ECB0 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				93D894662609EBF10089ECB0 /* EditorListView.swift */,
+				93D89494260B92120089ECB0 /* EditorItem.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		93D89492260B91E60089ECB0 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				93D894612609EBD20089ECB0 /* GameListView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		93D89493260B91F20089ECB0 /* Zone */ = {
+			isa = PBXGroup;
+			children = (
+				93D8946B2609EC040089ECB0 /* ZoneListView.swift */,
+			);
+			path = Zone;
 			sourceTree = "<group>";
 		};
 		BCDE6B0F25F9745100F710DE = {
@@ -363,6 +390,7 @@
 				93D8942C26011E350089ECB0 /* LoginView.swift in Sources */,
 				93D894762609EE450089ECB0 /* Game.swift in Sources */,
 				BCE8CE4F260A67210047CB27 /* InOutHelper.swift in Sources */,
+				93D89495260B92120089ECB0 /* EditorItem.swift in Sources */,
 				93D894712609EDD90089ECB0 /* HostingTabBar.swift in Sources */,
 				93D894672609EBF10089ECB0 /* EditorListView.swift in Sources */,
 				93D8943F260143C30089ECB0 /* MotherView.swift in Sources */,

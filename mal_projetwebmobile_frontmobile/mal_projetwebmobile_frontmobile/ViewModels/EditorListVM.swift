@@ -33,13 +33,6 @@ class EditorListVM: ObservableObject, EditorListDelegate {
     
     @Published private(set) var editors = [EditorVM]()
     
-    /*@Published var editorAddingError : Bool = false{
-        didSet{
-            if !editorAddingError{
-                editorListState = .ready
-            }
-        }
-    }*/
     
     @Published var editorListState: EditorListState = .ready{
 
@@ -70,7 +63,7 @@ class EditorListVM: ObservableObject, EditorListDelegate {
         for editor in self.model.editors{
             self.editors.append(EditorVM(editor))
         }
-        //self.editorListState = .newEditors(self.editors)
+       
     }
     
     

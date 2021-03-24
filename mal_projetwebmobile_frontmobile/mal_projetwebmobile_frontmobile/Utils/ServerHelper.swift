@@ -28,8 +28,7 @@ struct ServerHelper {
     static func editorDataToEditor(data: [EditorData]) -> [Editor]?{
         var editors = [Editor]()
         for edata in data{
-            let id : Int = edata.j_id
-            let editor = Editor(j_id: id, nomEditeur: edata.nomEditeur)
+            let editor = Editor(j_id: edata.j_id, nomEditeur: edata.nomEditeur)
             editors.append(editor)
         }
         return editors
@@ -39,15 +38,16 @@ struct ServerHelper {
     //@Escaping -- Fait appel à une fonction ailleurs (asynchrone)
     static func loadEditorsFromAPI(url surl: String, endofrequest: @escaping (Result<[Editor], HttpRequestError>) -> Void){
         
+        //vérifier l'url
         guard let url = URL(string: surl) else {
             endofrequest(.failure(.badURL(surl)))
             return
         }
-        self.loadEditorsFromAPI(url: url, endofrequest: endofrequest)
+        self.loadEditorsFromAPI(url: url, endofrequest: endofrequest) //appel la méthode d'en dessous
     }
     
     static func loadEditorsFromAPI(url: URL, endofrequest: @escaping (Result<[Editor], HttpRequestError>) -> Void){
-        self.loadEditorsFromJsonData(url: url, endofrequest: endofrequest, ServerApiRequest: true)
+        self.loadEditorsFromJsonData(url: url, endofrequest: endofrequest, ServerApiRequest: true) //appel la méthode d'en dessous
     }
 
     private static func loadEditorsFromJsonData(url: URL, endofrequest: @escaping (Result<[Editor], HttpRequestError>) -> Void, ServerApiRequest: Bool = true){
@@ -70,19 +70,16 @@ struct ServerHelper {
                     return
                 }
                 var editorsListData : [EditorData]
-                /*if ServerApiRequest{
-                    editorsListData = (decodedResponse as! EditorsListData).editors
-                }
-                else{*/
+              
                     editorsListData = (decodedResponse as! [EditorData])
-                //}
-                                
+                   
                 guard let editors = self.editorDataToEditor(data: editorsListData) else{
                     DispatchQueue.main.async { endofrequest(.failure(.JsonDecodingFailed)) }
                     return
                 }
                 
                 print("Editors ", editors[0].nomEditeur)
+                
                 DispatchQueue.main.async {
                     endofrequest(.success(editors))
                 }
