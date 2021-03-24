@@ -237,7 +237,7 @@ class InOutHelper {
     // -> clearly not a good idea for images
         
     
-    static var tracksRequest : AnyCancellable? // dataTaskPublished need a retained cancellable!
+    static var editorsRequest : AnyCancellable? // dataTaskPublished need a retained cancellable!
     
     static func httpGetJsonDataCombine<T: Decodable>(from surl: String, endofrequest: @escaping (Result<T,HttpRequestError>) -> Void){
         imageRequest.removeAll()
@@ -246,7 +246,7 @@ class InOutHelper {
             return
         }
         let request = URLRequest(url: url)
-        tracksRequest = URLSession.shared.dataTaskPublisher(for: request)
+        editorsRequest = URLSession.shared.dataTaskPublisher(for: request)
             .tryMap { output in
                 guard let response = output.response as? HTTPURLResponse else{
                     throw HttpRequestError.unknown
