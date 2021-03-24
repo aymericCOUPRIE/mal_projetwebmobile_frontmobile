@@ -46,7 +46,7 @@ class EditorListVM: ObservableObject, EditorListDelegate {
         didSet {
             //data -- tableau d'editor
             switch self.editorListState {
-            case .loaded(data):
+            case .loaded(let data):
                 self.model.new(editors: data)
             case .loadingError:
                 print("LOADING ERROR")
@@ -62,6 +62,7 @@ class EditorListVM: ObservableObject, EditorListDelegate {
     }
     
     func new(editors: [Editor]) {
+        print("Bonjour", editors)
         self.model.new(editors: editors)
     }
     

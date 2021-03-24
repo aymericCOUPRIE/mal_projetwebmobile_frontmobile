@@ -13,12 +13,17 @@ struct EditorListView: View {
     var url : String = "http://localhost:3000/server/festivals/gameByEditor"
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        //Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         
-        //loadEditor()
+        HStack {
+            Spacer()
+            Button("Search all editeurs", action: loadEditor)
+            Spacer()
+        }
     }
     
     func loadEditor() {
+        print("Etape 1")
         self.intent.loadEditorList(url: url)
     }
 }
