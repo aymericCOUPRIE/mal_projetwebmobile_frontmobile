@@ -11,7 +11,7 @@ import Foundation
 struct FestivalData: Codable {
     var fes_date: Date
     //fes_date.dateFormat("dd/MM/yyy")
-    var societes: [ExhibitorData]
+    //var societes: [ExhibitorData]
 }
 
 struct EditorsListData: Codable {
@@ -61,21 +61,21 @@ struct GameData: Codable {
 }
 
 struct ZoneData: Codable {
-
+    var zo_libelle: String
 }
 
 
 
 struct ServerHelper {
 
-    static func editorDataToEditor(data: [EditorData]) -> [Editor]?{
+    /*static func editorDataToEditor(data: [EditorData]) -> [Editor]?{
         var editors = [Editor]()
         for edata in data{
             let editor = Editor(j_id: edata.j_id, nomEditeur: edata.nomEditeur)
             editors.append(editor)
         }
         return editors
-    }
+    }*/
         
     
     //@Escaping -- Fait appel à une fonction ailleurs (asynchrone)
@@ -99,33 +99,39 @@ struct ServerHelper {
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data {
-                                               
+                
+                
+                print("DATA", data)
+                print("DATAS", String(data: data, encoding: .utf8)!)
+                
+                
                 let decodedData : Decodable?
                 
-                if ServerApiRequest{
-                    decodedData = try? JSONDecoder().decode([EditorData].self, from: data)
-                }
-                else{
-                    decodedData = try? JSONDecoder().decode([EditorData].self, from: data)
-                }
+                decodedData = try? JSONDecoder().decode([FestivalData].self, from: data)
+                
+                print("DECODED DATA", decodedData)
+                
                 guard let decodedResponse = decodedData else {
                     DispatchQueue.main.async { endofrequest(.failure(.JsonDecodingFailed)) }
                     return
                 }
-                var editorsListData : [EditorData]
+                var festivalsListData : [FestivalData]
               
-                    editorsListData = (decodedResponse as! [EditorData])
+                festivalsListData = (decodedResponse as! [FestivalData])
+                
+                print("FESTIVALS", festivalsListData)
                    
-                guard let editors = self.editorDataToEditor(data: editorsListData) else{
+                /*guard let editors = self.editorDataToEditor(data: editorsListData) else{
                     DispatchQueue.main.async { endofrequest(.failure(.JsonDecodingFailed)) }
                     return
-                }
+                }*/
                 
-                print("Editors ", editors[0].nomEditeur)
-                
+                //print("Editors ", editors[0].nomEditeur)
+                /*
                 DispatchQueue.main.async {
                     endofrequest(.success(editors))
                 }
+ */
             }
             else{
                 DispatchQueue.main.async {
