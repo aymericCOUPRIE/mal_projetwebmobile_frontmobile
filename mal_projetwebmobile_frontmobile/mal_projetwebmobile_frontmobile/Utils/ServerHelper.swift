@@ -8,20 +8,63 @@
 import Foundation
 
 
+struct FestivalData: Codable {
+    var fes_date: Date
+    //fes_date.dateFormat("dd/MM/yyy")
+    var societes: [ExhibitorData]
+}
+
 struct EditorsListData: Codable {
-    var editors: [EditorData]
+    //var editors: [EditorData]
+    //var societes
+}
+
+struct ExhibitorData: Codable {
+    //var soc_id: Int      --> pas besoin ?
+    var soc_nom: String // nomEditeur à remplacer par soc_nom
+    var reservations: [ReservationData]
+}
+
+struct ReservationData: Codable {
+    //var res_id: Int      --> pas besoin ?
+    var suivi_jeus: [GameMonitoringData]
+}
+
+struct GameMonitoringData: Codable {
+    //var suivJ_id: Int      --> pas besoin ?
+    var jeu: GameData
+    //var type_jeu: GameTypeData
+    var zone: ZoneData
+}
+
+struct GameTypeData: Codable {
+    //var typJ_id: Int      --> pas besoin ?
+    var typJ_libelle: String
 }
 
 struct EditorData: Codable {
     var nomEditeur: String
-    var j_id: Int //A supprimer plus tard
-    //var listGames: [GameData]
 }
 
 struct GameData: Codable {
-    var j_id: Int
+    //var j_id: Int      --> pas besoin ?
     var j_title: String
+    var j_ageMin: Int
+    var j_duree: String
+    var j_nbMaxJoueurs: Int
+    var j_nbMinJoueurs: Int
+    var j_lienNotice: String
+    //var typJ_id: Int      --> pas besoin ?
+    //var soc_id: Int      --> pas besoin ?
+    var type_jeu: GameTypeData
+    var societe: EditorData
 }
+
+struct ZoneData: Codable {
+
+}
+
+
 
 struct ServerHelper {
 
