@@ -9,15 +9,17 @@ import Foundation
 
 
 struct FestivalData: Codable {
-    var fes_date: Date
+    //var fes_date: Date
     //fes_date.dateFormat("dd/MM/yyy")
-    //var societes: [ExhibitorData]
+    var societes: [ExhibitorData]
 }
 
+/*
 struct EditorsListData: Codable {
     //var editors: [EditorData]
     //var societes
 }
+ */
 
 struct ExhibitorData: Codable {
     //var soc_id: Int      --> pas besoin ?
@@ -26,29 +28,21 @@ struct ExhibitorData: Codable {
 }
 
 struct ReservationData: Codable {
-    //var res_id: Int      --> pas besoin ?
+    //var res_id: Int      //--> pas besoin ?
     var suivi_jeus: [GameMonitoringData]
 }
 
 struct GameMonitoringData: Codable {
-    //var suivJ_id: Int      --> pas besoin ?
+    var suivJ_id: Int     // --> pas besoin ?
     var jeu: GameData
-    //var type_jeu: GameTypeData
     var zone: ZoneData
 }
 
-struct GameTypeData: Codable {
-    //var typJ_id: Int      --> pas besoin ?
-    var typJ_libelle: String
-}
 
-struct EditorData: Codable {
-    var nomEditeur: String
-}
 
 struct GameData: Codable {
     //var j_id: Int      --> pas besoin ?
-    var j_title: String
+    var j_titre: String
     var j_ageMin: Int
     var j_duree: String
     var j_nbMaxJoueurs: Int
@@ -64,7 +58,13 @@ struct ZoneData: Codable {
     var zo_libelle: String
 }
 
+struct GameTypeData: Codable {
+    var typJ_libelle: String
+}
 
+struct EditorData: Codable {
+    var nomEditeur: String
+}
 
 struct ServerHelper {
 
@@ -105,16 +105,21 @@ struct ServerHelper {
                 print("DATAS", String(data: data, encoding: .utf8)!)
                 
                 
-                let decodedData : Decodable?
+                var decodedData : Decodable? = nil
                 
-                decodedData = try? JSONDecoder().decode([FestivalData].self, from: data)
-                
-                print("DECODED DATA", decodedData)
+                do {
+                decodedData = try JSONDecoder().decode([FestivalData].self, from: data)
+                } catch let jsonError as NSError {
+                    print("JSON decode failed: \(jsonError.localizedDescription)")
+                }
+                                
                 
                 guard let decodedResponse = decodedData else {
                     DispatchQueue.main.async { endofrequest(.failure(.JsonDecodingFailed)) }
                     return
                 }
+                
+                
                 var festivalsListData : [FestivalData]
               
                 festivalsListData = (decodedResponse as! [FestivalData])
