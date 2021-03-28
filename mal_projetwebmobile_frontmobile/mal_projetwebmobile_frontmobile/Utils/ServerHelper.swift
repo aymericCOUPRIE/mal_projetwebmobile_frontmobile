@@ -48,8 +48,6 @@ struct GameData: Codable {
     var j_nbMaxJoueurs: Int
     var j_nbMinJoueurs: Int
     var j_lienNotice: String
-    //var typJ_id: Int      --> pas besoin ?
-    //var soc_id: Int      --> pas besoin ?
     var type_jeu: GameTypeData
     var societe: EditorData
 }
