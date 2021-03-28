@@ -68,14 +68,14 @@ struct EditorData: Codable {
 
 struct ServerHelper {
 
-    /*static func editorDataToEditor(data: [EditorData]) -> [Editor]?{
+    static func editorDataToEditor(data: [FestivalData]) -> [Fes]?{
         var editors = [Editor]()
         for edata in data{
             let editor = Editor(j_id: edata.j_id, nomEditeur: edata.nomEditeur)
             editors.append(editor)
         }
         return editors
-    }*/
+    }
         
     
     //@Escaping -- Fait appel à une fonction ailleurs (asynchrone)

@@ -18,6 +18,11 @@
 		93D894762609EE450089ECB0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D894752609EE450089ECB0 /* Game.swift */; };
 		93D8947E2609EE510089ECB0 /* GameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8947D2609EE510089ECB0 /* GameVM.swift */; };
 		93D89495260B92120089ECB0 /* EditorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D89494260B92120089ECB0 /* EditorItem.swift */; };
+		BCD713542610C61C0002FAAA /* Festival.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD713532610C61C0002FAAA /* Festival.swift */; };
+		BCD713592610CB100002FAAA /* Societe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD713582610CB100002FAAA /* Societe.swift */; };
+		BCD7135E2610CBAD0002FAAA /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD7135D2610CBAD0002FAAA /* Reservation.swift */; };
+		BCD713632610CC820002FAAA /* SuiviJeu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD713622610CC820002FAAA /* SuiviJeu.swift */; };
+		BCD713682610CD400002FAAA /* Zone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD713672610CD400002FAAA /* Zone.swift */; };
 		BCDE6B1C25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE6B1B25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift */; };
 		BCDE6B1E25F9745100F710DE /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE6B1D25F9745100F710DE /* StartView.swift */; };
 		BCDE6B2025F9745200F710DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCDE6B1F25F9745200F710DE /* Assets.xcassets */; };
@@ -62,6 +67,11 @@
 		93D894752609EE450089ECB0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		93D8947D2609EE510089ECB0 /* GameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVM.swift; sourceTree = "<group>"; };
 		93D89494260B92120089ECB0 /* EditorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorItem.swift; sourceTree = "<group>"; };
+		BCD713532610C61C0002FAAA /* Festival.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Festival.swift; sourceTree = "<group>"; };
+		BCD713582610CB100002FAAA /* Societe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Societe.swift; sourceTree = "<group>"; };
+		BCD7135D2610CBAD0002FAAA /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		BCD713622610CC820002FAAA /* SuiviJeu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuiviJeu.swift; sourceTree = "<group>"; };
+		BCD713672610CD400002FAAA /* Zone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zone.swift; sourceTree = "<group>"; };
 		BCDE6B1825F9745100F710DE /* mal_projetwebmobile_frontmobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mal_projetwebmobile_frontmobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCDE6B1B25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mal_projetwebmobile_frontmobileApp.swift; sourceTree = "<group>"; };
 		BCDE6B1D25F9745100F710DE /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -137,6 +147,11 @@
 				93D894752609EE450089ECB0 /* Game.swift */,
 				BCE8CE26260A421C0047CB27 /* Editor.swift */,
 				BCE8CE3C260A4F720047CB27 /* EditorList.swift */,
+				BCD713532610C61C0002FAAA /* Festival.swift */,
+				BCD713582610CB100002FAAA /* Societe.swift */,
+				BCD7135D2610CBAD0002FAAA /* Reservation.swift */,
+				BCD713622610CC820002FAAA /* SuiviJeu.swift */,
+				BCD713672610CD400002FAAA /* Zone.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -379,6 +394,8 @@
 			files = (
 				BCDE6B1E25F9745100F710DE /* StartView.swift in Sources */,
 				BCDE6B1C25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift in Sources */,
+				BCD713682610CD400002FAAA /* Zone.swift in Sources */,
+				BCD713542610C61C0002FAAA /* Festival.swift in Sources */,
 				93D894622609EBD20089ECB0 /* GameListView.swift in Sources */,
 				93D8946C2609EC040089ECB0 /* ZoneListView.swift in Sources */,
 				BCE8CE27260A421C0047CB27 /* Editor.swift in Sources */,
@@ -386,10 +403,13 @@
 				BCE8CE54260A6A140047CB27 /* EditorListVM.swift in Sources */,
 				93D8947E2609EE510089ECB0 /* GameVM.swift in Sources */,
 				BCE8CE22260A41B80047CB27 /* EditorVM.swift in Sources */,
+				BCD713592610CB100002FAAA /* Societe.swift in Sources */,
 				93D894242600B87A0089ECB0 /* KeyboardResponder.swift in Sources */,
 				93D8942C26011E350089ECB0 /* LoginView.swift in Sources */,
+				BCD713632610CC820002FAAA /* SuiviJeu.swift in Sources */,
 				93D894762609EE450089ECB0 /* Game.swift in Sources */,
 				BCE8CE4F260A67210047CB27 /* InOutHelper.swift in Sources */,
+				BCD7135E2610CBAD0002FAAA /* Reservation.swift in Sources */,
 				93D89495260B92120089ECB0 /* EditorItem.swift in Sources */,
 				93D894712609EDD90089ECB0 /* HostingTabBar.swift in Sources */,
 				93D894672609EBF10089ECB0 /* EditorListView.swift in Sources */,
