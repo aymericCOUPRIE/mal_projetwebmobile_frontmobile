@@ -14,11 +14,9 @@ class TypeJeu : ObservableObject, Identifiable, Equatable, Encodable {
     }
     
     
-    private(set) var typeJ_id : Int
     private(set) var typeJ_libelle : String
     
-    init(id: Int, libelle: String) {
-        self.typeJ_id = id
+    init(libelle: String) {
         self.typeJ_libelle = libelle
     }
 }

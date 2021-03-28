@@ -83,12 +83,17 @@ struct ServerHelper {
                     var suivJ = [SuiviJeu]()
                     for sjdata in rdata.suivi_jeus {
                         
-                        let game = Game(j_id: sjdata.jeu.j_id)
-                        print("GAME", game.j_id)
                         
+                        
+                        let zone = Zone(zone_libelle: sjdata.zone.zo_libelle)
+                        
+                        let typeJeu = TypeJeu(libelle: sjdata.jeu.type_jeu.typJ_libelle)
+                        let editor = Editor(nomEditeur: sjdata.jeu.societe.nomEditeur)
+                        let game = Game(j_id: sjdata.jeu.j_id)
+                       
                     
                         
-                        let sj = SuiviJeu(suivJ_id: sjdata.suivJ_id)
+                        let sj = SuiviJeu(suivJ_id: sjdata.suivJ_id, game: game, zone: zone)
                         suivJ.append(sj)
                     }
 

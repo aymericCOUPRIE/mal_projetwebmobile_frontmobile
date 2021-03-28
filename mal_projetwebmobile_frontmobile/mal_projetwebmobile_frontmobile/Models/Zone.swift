@@ -9,13 +9,13 @@ import Foundation
 
 class Zone: ObservableObject, Encodable, Equatable, Identifiable {
     static func == (lhs: Zone, rhs: Zone) -> Bool {
-        return lhs.zone_id == rhs.zone_id
+        return lhs.zone_libelle == rhs.zone_libelle
     }
     
     
-    private(set) var zone_id : Int
+    private(set) var zone_libelle : String
     
-    init(zone_id: Int) {
-        self.zone_id = zone_id
+    init(zone_libelle: String) {
+        self.zone_libelle = zone_libelle
     }
 }

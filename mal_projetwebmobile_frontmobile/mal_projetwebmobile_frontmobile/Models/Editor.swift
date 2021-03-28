@@ -16,7 +16,7 @@ class Editor : Identifiable, ObservableObject, Encodable, Equatable {
 
     private(set) var nomEditeur: String
     
-    init(j_id: Int, nomEditeur: String) {
+    init(nomEditeur: String) {
         self.nomEditeur = nomEditeur
     }
        
