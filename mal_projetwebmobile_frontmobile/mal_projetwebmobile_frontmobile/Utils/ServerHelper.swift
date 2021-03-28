@@ -86,15 +86,31 @@ struct ServerHelper {
                         
                         
                         let zone = Zone(zone_libelle: sjdata.zone.zo_libelle)
+                        print("ZONE", zone)
                         
                         let typeJeu = TypeJeu(libelle: sjdata.jeu.type_jeu.typJ_libelle)
+                        print("TYPEJEU", typeJeu)
+                        
                         let editor = Editor(nomEditeur: sjdata.jeu.societe.nomEditeur)
-                        let game = Game(j_id: sjdata.jeu.j_id)
-                       
+                        print("EDITOR", editor)
+                        
+                        
+                        let j_id: Int = sjdata.jeu.j_id
+                        let j_titre: String = sjdata.jeu.j_titre
+                        //var j_duree: String //PAS DE TYPE STRING
+                        let j_nbMaxJoueur: Int = sjdata.jeu.j_nbMaxJoueurs
+                        let j_nbMinJoueurs: Int = sjdata.jeu.j_nbMinJoueurs
+                        let j_lienNotice: String = sjdata.jeu.j_lienNotice
+                        
+                        let game = Game(j_id: j_id, j_titre: j_titre, j_nbMaxJoueur: j_nbMaxJoueur, j_nbMinJoueurs: j_nbMinJoueurs, j_lienNotice: j_lienNotice, j_editor: editor, j_type: typeJeu)
+                        
+                        print("GAME", game)
                     
                         
                         let sj = SuiviJeu(suivJ_id: sjdata.suivJ_id, game: game, zone: zone)
                         suivJ.append(sj)
+                        print("SUIVI JEU", sj)
+                        
                     }
 
                     let tempo = Reservation(res_id: rdata.res_id, suiv_jeux: suivJ)

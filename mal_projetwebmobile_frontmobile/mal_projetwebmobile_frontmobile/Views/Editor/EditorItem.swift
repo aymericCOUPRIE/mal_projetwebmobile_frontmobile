@@ -32,6 +32,6 @@ struct EditorItem: View {
 
 struct EditorItem_Previews: PreviewProvider {
     static var previews: some View {
-        EditorItem(EditorVM(Editor(j_id: 2, nomEditeur: "Hasbro")))
+        EditorItem(EditorVM(Editor(nomEditeur: "Hasbro")))
     }
 }

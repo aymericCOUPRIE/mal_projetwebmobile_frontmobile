@@ -10,7 +10,7 @@ import Foundation
 
 class TypeJeu : ObservableObject, Identifiable, Equatable, Encodable {
     static func == (lhs: TypeJeu, rhs: TypeJeu) -> Bool {
-        lhs.typeJ_id == rhs.typeJ_id
+        lhs.typeJ_libelle == rhs.typeJ_libelle
     }
     
     
