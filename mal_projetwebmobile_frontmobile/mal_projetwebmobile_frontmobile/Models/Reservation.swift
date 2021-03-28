@@ -12,11 +12,11 @@ class Reservation: ObservableObject, Identifiable, Equatable, Encodable {
         return lhs.res_id == rhs.res_id
     }
     
-    private(set) var res_id: Int
+    private(set) var res_id : Int
     private(set) var suiv_jeux = [SuiviJeu]()
 
 
-    init(res_id: Int, suivi_jeux: [SuiviJeu]) {
+    init(res_id: Int, suiv_jeux: [SuiviJeu]) {
         self.res_id = res_id
         self.suiv_jeux = suiv_jeux
     }

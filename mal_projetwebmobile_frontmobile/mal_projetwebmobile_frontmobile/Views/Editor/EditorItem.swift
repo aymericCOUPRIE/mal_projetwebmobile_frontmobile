@@ -22,7 +22,7 @@ struct EditorItem: View {
                 Spacer()
             }
             HStack{
-                Text("\(editor.j_id)") //différent de la ligne du dessus car c'est un int
+                Text("\(editor.nomEditeur)") //différent de la ligne du dessus car c'est un int
                 Spacer()
             }
             

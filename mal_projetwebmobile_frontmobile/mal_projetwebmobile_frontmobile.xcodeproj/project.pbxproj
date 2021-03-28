@@ -23,6 +23,7 @@
 		BCD7135E2610CBAD0002FAAA /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD7135D2610CBAD0002FAAA /* Reservation.swift */; };
 		BCD713632610CC820002FAAA /* SuiviJeu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD713622610CC820002FAAA /* SuiviJeu.swift */; };
 		BCD713682610CD400002FAAA /* Zone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD713672610CD400002FAAA /* Zone.swift */; };
+		BCD7136D2611151D0002FAAA /* TypeJeu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD7136C2611151D0002FAAA /* TypeJeu.swift */; };
 		BCDE6B1C25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE6B1B25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift */; };
 		BCDE6B1E25F9745100F710DE /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE6B1D25F9745100F710DE /* StartView.swift */; };
 		BCDE6B2025F9745200F710DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCDE6B1F25F9745200F710DE /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		BCD7135D2610CBAD0002FAAA /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		BCD713622610CC820002FAAA /* SuiviJeu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuiviJeu.swift; sourceTree = "<group>"; };
 		BCD713672610CD400002FAAA /* Zone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zone.swift; sourceTree = "<group>"; };
+		BCD7136C2611151D0002FAAA /* TypeJeu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeJeu.swift; sourceTree = "<group>"; };
 		BCDE6B1825F9745100F710DE /* mal_projetwebmobile_frontmobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mal_projetwebmobile_frontmobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCDE6B1B25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mal_projetwebmobile_frontmobileApp.swift; sourceTree = "<group>"; };
 		BCDE6B1D25F9745100F710DE /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				BCD7135D2610CBAD0002FAAA /* Reservation.swift */,
 				BCD713622610CC820002FAAA /* SuiviJeu.swift */,
 				BCD713672610CD400002FAAA /* Zone.swift */,
+				BCD7136C2611151D0002FAAA /* TypeJeu.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				93D894762609EE450089ECB0 /* Game.swift in Sources */,
 				BCE8CE4F260A67210047CB27 /* InOutHelper.swift in Sources */,
 				BCD7135E2610CBAD0002FAAA /* Reservation.swift in Sources */,
+				BCD7136D2611151D0002FAAA /* TypeJeu.swift in Sources */,
 				93D89495260B92120089ECB0 /* EditorItem.swift in Sources */,
 				93D894712609EDD90089ECB0 /* HostingTabBar.swift in Sources */,
 				93D894672609EBF10089ECB0 /* EditorListView.swift in Sources */,

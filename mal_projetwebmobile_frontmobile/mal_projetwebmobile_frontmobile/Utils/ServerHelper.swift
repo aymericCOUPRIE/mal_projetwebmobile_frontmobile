@@ -28,7 +28,7 @@ struct ExhibitorData: Codable {
 }
 
 struct ReservationData: Codable {
-    //var res_id: Int      //--> pas besoin ?
+    var res_id: Int      //--> pas besoin ?
     var suivi_jeus: [GameMonitoringData]
 }
 
@@ -41,7 +41,7 @@ struct GameMonitoringData: Codable {
 
 
 struct GameData: Codable {
-    //var j_id: Int      --> pas besoin ?
+    var j_id: Int     // --> pas besoin ?
     var j_titre: String
     var j_ageMin: Int
     var j_duree: String
@@ -68,13 +68,39 @@ struct EditorData: Codable {
 
 struct ServerHelper {
 
-    static func editorDataToEditor(data: [FestivalData]) -> [Fes]?{
-        var editors = [Editor]()
-        for edata in data{
-            let editor = Editor(j_id: edata.j_id, nomEditeur: edata.nomEditeur)
-            editors.append(editor)
+    static func festivalEditorToFestival(data: [FestivalData]) -> [Societe]?{
+        var societes = [Societe]()
+        //var societes = [Societe]()
+        
+        print("DATA", data)
+        
+        for fdata in data{
+            for sdata in fdata.societes {
+
+                var res = [Reservation]()
+                for rdata in sdata.reservations {
+                    
+                    var suivJ = [SuiviJeu]()
+                    for sjdata in rdata.suivi_jeus {
+                        
+                        let game = Game(j_id: sjdata.jeu.j_id)
+                        print("GAME", game.j_id)
+                        
+                    
+                        
+                        let sj = SuiviJeu(suivJ_id: sjdata.suivJ_id)
+                        suivJ.append(sj)
+                    }
+
+                    let tempo = Reservation(res_id: rdata.res_id, suiv_jeux: suivJ)
+                    res.append(tempo)
+                }
+                let soc = Societe(soc_nom: sdata.soc_nom, reservations: res)
+                societes.append(soc)
+            }
+            
         }
-        return editors
+        return societes
     }
         
     
@@ -126,17 +152,17 @@ struct ServerHelper {
                 
                 print("FESTIVALS", festivalsListData)
                    
-                /*guard let editors = self.editorDataToEditor(data: editorsListData) else{
+                guard let societes = self.festivalEditorToFestival(data: festivalsListData) else{
                     DispatchQueue.main.async { endofrequest(.failure(.JsonDecodingFailed)) }
                     return
-                }*/
-                
-                //print("Editors ", editors[0].nomEditeur)
-                /*
-                DispatchQueue.main.async {
-                    endofrequest(.success(editors))
                 }
- */
+                
+                print("MODEL", societes)
+                
+                /*DispatchQueue.main.async {
+                    endofrequest(.success(societes))
+                }*/
+ 
             }
             else{
                 DispatchQueue.main.async {

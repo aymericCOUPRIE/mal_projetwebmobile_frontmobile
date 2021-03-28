@@ -7,13 +7,17 @@
 
 import Foundation
 
-class Societe: ObservableObject {
+class Societe: ObservableObject, Identifiable, Equatable, Encodable {
+    static func == (lhs: Societe, rhs: Societe) -> Bool {
+        return lhs.soc_nom == rhs.soc_nom
+    }
+    
     
     private(set) var soc_nom: String
-    private(set) var reservation: [Reservation]()
+    private(set) var reservations = [Reservation]()
     
     init(soc_nom: String, reservations: [Reservation]) {
         self.soc_nom = soc_nom
-        self.reservation = reservation
+        self.reservations = reservations
     }
 }
