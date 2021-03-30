@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93C025F026126EFF00492B81 /* FestivalIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C025EF26126EFF00492B81 /* FestivalIntent.swift */; };
+		93C025F526126F2A00492B81 /* FestivalVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C025F426126F2A00492B81 /* FestivalVM.swift */; };
 		93D894242600B87A0089ECB0 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D894232600B87A0089ECB0 /* KeyboardResponder.swift */; };
 		93D8942C26011E350089ECB0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8942B26011E350089ECB0 /* LoginView.swift */; };
 		93D8943F260143C30089ECB0 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8943E260143C30089ECB0 /* MotherView.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93C025EF26126EFF00492B81 /* FestivalIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalIntent.swift; sourceTree = "<group>"; };
+		93C025F426126F2A00492B81 /* FestivalVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalVM.swift; sourceTree = "<group>"; };
 		93D894232600B87A0089ECB0 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		93D8942B26011E350089ECB0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		93D8943E260143C30089ECB0 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				93D8947D2609EE510089ECB0 /* GameVM.swift */,
 				BCE8CE21260A41B80047CB27 /* EditorVM.swift */,
 				BCE8CE53260A6A140047CB27 /* EditorListVM.swift */,
+				93C025F426126F2A00492B81 /* FestivalVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				BCE8CE34260A454B0047CB27 /* EditorListViewIntent.swift */,
+				93C025EF26126EFF00492B81 /* FestivalIntent.swift */,
 			);
 			path = Intent;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				93D894622609EBD20089ECB0 /* GameListView.swift in Sources */,
 				93D8946C2609EC040089ECB0 /* ZoneListView.swift in Sources */,
 				BCE8CE27260A421C0047CB27 /* Editor.swift in Sources */,
+				93C025F026126EFF00492B81 /* FestivalIntent.swift in Sources */,
 				BCE8CE35260A454B0047CB27 /* EditorListViewIntent.swift in Sources */,
 				BCE8CE54260A6A140047CB27 /* EditorListVM.swift in Sources */,
 				93D8947E2609EE510089ECB0 /* GameVM.swift in Sources */,
@@ -418,6 +425,7 @@
 				93D894712609EDD90089ECB0 /* HostingTabBar.swift in Sources */,
 				93D894672609EBF10089ECB0 /* EditorListView.swift in Sources */,
 				93D8943F260143C30089ECB0 /* MotherView.swift in Sources */,
+				93C025F526126F2A00492B81 /* FestivalVM.swift in Sources */,
 				BCE8CE3D260A4F720047CB27 /* EditorList.swift in Sources */,
 				93D8944E2601462B0089ECB0 /* ViewRouter.swift in Sources */,
 				BCE8CE47260A5C2E0047CB27 /* ServerHelper.swift in Sources */,

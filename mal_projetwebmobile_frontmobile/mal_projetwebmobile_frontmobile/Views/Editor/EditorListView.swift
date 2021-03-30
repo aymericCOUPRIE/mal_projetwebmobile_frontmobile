@@ -9,9 +9,24 @@ import SwiftUI
 import Combine
 
 struct EditorListView: View {
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    }
+}
+
+struct EditorListView_Previews: PreviewProvider {
+    static var previews: some View {
+        EditorListView()
+    }
+}
+
+/*
+struct EditorListView: View {
+  
     
+
     @ObservedObject var editorListVM : EditorListVM
-    var intent : EditorListViewIntent
+   var intent : EditorListViewIntent
     
     init(editorListVM : EditorListVM){
         self.editorListVM = editorListVM
@@ -37,10 +52,11 @@ struct EditorListView: View {
         }
     }
     
-    var url : String = "http://localhost:3000/server/festivals/gameByEditor"
-    
+    var url : String = "/server/festivals/allInfosNextFestival"
+
+ 
     var body: some View {
-       
+    
         VStack{
             ZStack{
                 List{
@@ -60,7 +76,7 @@ struct EditorListView: View {
         }
     }
     
-    
+
 }
 
 struct EditorListView_Previews: PreviewProvider {
@@ -112,4 +128,8 @@ struct ErrorMessage : View{
             }
         }
     }
+    
 }
+
+
+*/

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-
+/*
 class EditorListViewIntent {
     
     @ObservedObject var editorList : EditorListVM
@@ -38,4 +38,4 @@ class EditorListViewIntent {
 
     }
 }
-
+*/

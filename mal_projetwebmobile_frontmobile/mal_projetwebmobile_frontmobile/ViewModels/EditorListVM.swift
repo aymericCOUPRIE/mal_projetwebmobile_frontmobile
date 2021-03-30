@@ -7,8 +7,8 @@
 
 import Foundation
 import Combine
-import SwiftUI
 
+/*
 
 enum EditorListState {
     case ready
@@ -68,3 +68,4 @@ class EditorListVM: ObservableObject, EditorListDelegate {
     
     
 }
+*/

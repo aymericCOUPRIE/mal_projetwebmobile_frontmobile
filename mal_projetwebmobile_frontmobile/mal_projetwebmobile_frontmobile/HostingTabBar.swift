@@ -10,11 +10,12 @@ import SwiftUI
 
 struct TabBarApp: App {
     
-    @StateObject var editorList : EditorListVM = EditorListVM(EditorList())
+    //@StateObject var editorList : EditorListVM = EditorListVM(EditorList())
+    @StateObject var festivalVM : FestivalVM = FestivalVM(Festival(societes: [Societe]()))
     
     var body: some Scene {
         WindowGroup{
-            HostingTabBar(editorList: editorList)
+            HostingTabBar(festivalVM: festivalVM)
         }
     }
 }
@@ -29,17 +30,25 @@ struct HostingTabBar: View {
     
     @State private var selectedTab: Tab = .home
     
-    @ObservedObject var editorList: EditorListVM
-    var intent: EditorListViewIntent
+    //@ObservedObject var editorList: EditorListVM
+    //var intent: EditorListViewIntent
     
+    @ObservedObject var festivalVM : FestivalVM
+    
+    init(festivalVM : FestivalVM){
+        self.festivalVM = festivalVM
+    }
+    
+    /*
     init(editorList: EditorListVM) {
         self.editorList = editorList
         self.intent = EditorListViewIntent(editorList: editorList)
     }
+ */
     
     var body: some View{
         TabView(selection: $selectedTab){
-            StartView()
+            StartView(festivalVM: self.festivalVM)
                 .tag(0)
                 .tabItem{
                     Text("Acceuil")
@@ -52,7 +61,7 @@ struct HostingTabBar: View {
                     Image(systemName: "die.face.5")
                 }
             
-            EditorListView(editorListVM: self.editorList)
+            EditorListView()
                 .tag(2)
                 .tabItem{
                     Text("Éditeurs")
@@ -73,6 +82,6 @@ struct HostingTabBar: View {
 
 struct HostingTabBar_Previews: PreviewProvider {
     static var previews: some View {
-        HostingTabBar(editorList: EditorListVM(EditorList()))
+        HostingTabBar(festivalVM: FestivalVM(Festival(societes: [Societe]())))
     }
 }

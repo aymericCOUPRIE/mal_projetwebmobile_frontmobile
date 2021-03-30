@@ -7,19 +7,21 @@
 
 import Foundation
 
-protocol FestivalDelegate {
-    func newFestival()
-}
+
 
 class Festival: ObservableObject {
     
     
-    var delegate: FestivalDelegate?
+ 
     private(set) var societes = [Societe]()
+    
+    init(societes: [Societe]){
+        self.societes = societes
+    }
     
     func new(societes: [Societe]) {
         self.societes = societes
-        self.delegate?.newFestival()
     }
+    
     
 }

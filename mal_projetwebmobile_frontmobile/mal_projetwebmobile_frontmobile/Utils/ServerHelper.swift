@@ -14,12 +14,7 @@ struct FestivalData: Codable {
     var societes: [ExhibitorData]
 }
 
-/*
-struct EditorsListData: Codable {
-    //var editors: [EditorData]
-    //var societes
-}
- */
+
 
 struct ExhibitorData: Codable {
     //var soc_id: Int      --> pas besoin ?
@@ -66,10 +61,10 @@ struct EditorData: Codable {
 
 struct ServerHelper {
 
-    static func festivalEditorToFestival(data: [FestivalData]) -> [Societe]?{
-        var societes = [Societe]()
-        //var societes = [Societe]()
+    static func festivalDataToFestival(data: [FestivalData]) -> Festival?{
         
+        var societes = [Societe]()
+       
         print("DATA", data)
         
         for fdata in data{
@@ -95,7 +90,7 @@ struct ServerHelper {
                         
                         let j_id: Int = sjdata.jeu.j_id
                         let j_titre: String = sjdata.jeu.j_titre
-                        //var j_duree: String //PAS DE TYPE STRING
+                        //let j_duree: String //PAS DE TYPE STRING
                         let j_nbMaxJoueur: Int = sjdata.jeu.j_nbMaxJoueurs
                         let j_nbMinJoueurs: Int = sjdata.jeu.j_nbMinJoueurs
                         let j_lienNotice: String = sjdata.jeu.j_lienNotice
@@ -119,26 +114,26 @@ struct ServerHelper {
             }
             
         }
-        return societes
+        return Festival(societes: societes)
     }
         
     
     //@Escaping -- Fait appel à une fonction ailleurs (asynchrone)
-    static func loadEditorsFromAPI(url surl: String, endofrequest: @escaping (Result<[Editor], HttpRequestError>) -> Void){
+    static func loadFestivalFromAPI(url surl: String, endofrequest: @escaping (Result<Festival, HttpRequestError>) -> Void){
         
         //vérifier l'url
         guard let url = URL(string: surl) else {
             endofrequest(.failure(.badURL(surl)))
             return
         }
-        self.loadEditorsFromAPI(url: url, endofrequest: endofrequest) //appel la méthode d'en dessous
+        self.loadFestivalFromAPI(url: url, endofrequest: endofrequest) //appel la méthode d'en dessous
     }
     
-    static func loadEditorsFromAPI(url: URL, endofrequest: @escaping (Result<[Editor], HttpRequestError>) -> Void){
-        self.loadEditorsFromJsonData(url: url, endofrequest: endofrequest, ServerApiRequest: true) //appel la méthode d'en dessous
+    static func loadFestivalFromAPI(url: URL, endofrequest: @escaping (Result<Festival, HttpRequestError>) -> Void){
+        self.loadFestivalFromJsonData(url: url, endofrequest: endofrequest, ServerApiRequest: true) //appel la méthode d'en dessous
     }
 
-    private static func loadEditorsFromJsonData(url: URL, endofrequest: @escaping (Result<[Editor], HttpRequestError>) -> Void, ServerApiRequest: Bool = true){
+    private static func loadFestivalFromJsonData(url: URL, endofrequest: @escaping (Result<Festival, HttpRequestError>) -> Void, ServerApiRequest: Bool = true){
         
         let request = URLRequest(url: url)
         
@@ -171,16 +166,16 @@ struct ServerHelper {
                 
                 print("FESTIVALS", festivalsListData)
                    
-                guard let societes = self.festivalEditorToFestival(data: festivalsListData) else{
+                guard let festival = self.festivalDataToFestival(data: festivalsListData) else{
                     DispatchQueue.main.async { endofrequest(.failure(.JsonDecodingFailed)) }
                     return
                 }
                 
-                print("MODEL", societes)
+                print("MODEL", festival)
                 
-                /*DispatchQueue.main.async {
-                    endofrequest(.success(societes))
-                }*/
+                DispatchQueue.main.async {
+                    endofrequest(.success(festival))
+                }
  
             }
             else{

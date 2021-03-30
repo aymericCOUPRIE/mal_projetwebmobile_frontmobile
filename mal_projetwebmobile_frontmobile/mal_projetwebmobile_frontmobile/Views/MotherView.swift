@@ -17,19 +17,20 @@ struct MotherView: View {
    
     @EnvironmentObject var viewRouter: ViewRouter //pour que notre vue observe le ViewRouter
     
-    @StateObject var editorList : EditorListVM = EditorListVM(EditorList())
-
+    //@StateObject var editorList : EditorListVM = EditorListVM(EditorList())
     
+    @StateObject var festivalVM : FestivalVM = FestivalVM(Festival(societes: [Societe]()))
+
     var body: some View {
         VStack{
             switch viewRouter.currentPage {
                 case .startView:
-                StartView()
+                    StartView(festivalVM: festivalVM)
                 case .loginView:
                 LoginView()
                 
             case .HostingTabBar:
-                HostingTabBar(editorList: editorList)
+                HostingTabBar(festivalVM: festivalVM)
             }
             
         }

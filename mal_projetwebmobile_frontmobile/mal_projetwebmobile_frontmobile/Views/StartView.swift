@@ -10,13 +10,48 @@ import SwiftUI
 struct StartView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter //je lie ma vue au viewRouter
- 
+    
+    @ObservedObject var festivalVM: FestivalVM
+    
+    var intent : FestivalIntent
+    
+    var url : String = "/server/festivals/allInfosNextFestival"
+    
+    init(festivalVM : FestivalVM){
+        self.festivalVM = festivalVM
+        self.intent = FestivalIntent(festival: festivalVM)
+        let _ = self.festivalVM.$festivalState.sink(receiveValue: stateChanged)
+       }
+    }
+
+private var festivalState : FestivalState{
+    return self.festivalVM.festivalState
+}
+
+var festival : Festival {
+    return self.festivalVM.festival
+}
+
+func stateChanged(state: FestivalState){
+    
+    switch state {
+    case .ready:
+        self.intent.loadFestival(url)//au tout début je charge mon festival
+    default:
+        return
+    }
+}
+
+
     
     var body: some View {
         NavigationView {
             VStack {
                 WelcomeText()
                 LogoImage()
+                //RDV()
+                
+                
                 /*
                 WhoAreYouText()
                //lien vers page login si organisateur
@@ -32,22 +67,26 @@ struct StartView: View {
                }){
                 visiteurButtonContent()
                 }
- */
+                 */
                 
             }.padding()
+            ErrorView(state: FestivalState)
             
         }
     }
         
 }
 
-#if DEBUG
+
+
+
 struct StartView_Previews: PreviewProvider {
     static var previews: some View {
-        StartView().environmentObject(ViewRouter())//passe un router en paramètres
+        StartView(festivalVM: FestivalVM(Festival(societes: [Societe]))).environmentObject(ViewRouter())//passe un router en paramètres
     }
 }
-#endif
+
+
 
 struct WelcomeText : View {
     var body: some View{
@@ -68,7 +107,62 @@ struct LogoImage : View {
             .padding(.bottom, 75)
             }
 }
+
+/*
+struct RDV : View {
+    var body: some View {
+        return Text(Rendez-vous le \(festival.model.date))
+    }
+}
+ */
+
+struct ErrorView : View{
+    let state : FestivalState
+    var body: some View{
+        VStack{
+            Spacer()
+            switch state{
+            case .loading:
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .blue))
+                    .scaleEffect(3)
+            case .loadingError(let error):
+                ErrorMessage(error: error)
+            default:
+                EmptyView()
+            }
+            if case let .loaded(data) = state{
+                //Text("\(data.count) editors found!")    changer pour dire qu'on a pas trouve de festival
+            }
+            Spacer()
+        }
+    }
+}
+
+struct ErrorMessage : View{
+    let error :  Error
+    var body: some View{
+        VStack{
+            Text("Error in search request")
+                .foregroundColor(.red)
+                .font(.title)
+            if let error = error  as? HttpRequestError {
+                Text("\(error.description)")
+                    .italic()
+                    .foregroundColor(.gray)
+
+            }
+            else{
+                Text("Unknown error")
+                    .foregroundColor(.red)
+                    .font(.title)
+            }
+        }
+    }
     
+}
+    
+/*
 struct WhoAreYouText : View {
     var body: some View{
         return Text("Qui êtes vous?")
@@ -98,4 +192,4 @@ struct visiteurButtonContent: View {
         .padding(.top, 10)
     }
 }
-
+*/
