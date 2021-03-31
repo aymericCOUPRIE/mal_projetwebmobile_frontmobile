@@ -31,7 +31,7 @@ struct HostingTabBar: View {
                                Text("Acceuil")
                                Image(systemName: "house.fill")
                            }
-                      // GameListView()
+                      FestivalGameListView()
                            .tag(1)
                            .tabItem{
                                Text("Jeux")

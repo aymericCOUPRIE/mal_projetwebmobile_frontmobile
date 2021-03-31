@@ -11,7 +11,11 @@ import Foundation
 class GameList : ObservableObject {
     
     
-    private(set) var games = [Game]()
+    private(set) var games : [Game]
+    
+    init(games: [Game]){
+        self.games = games
+    }
     
     func new(games: [Game]) {
         self.games = games

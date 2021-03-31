@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ZoneListView: View {
+    //pour la barre de recherche
+    @State private var searchText = ""
     
     @ObservedObject var zoneListVM: ZoneListVM
     var intent : ZoneListIntent
@@ -48,20 +50,49 @@ struct ZoneListView: View {
             return
         }
     }
-    
 
     
     var body: some View {
-        NavigationView{
+        ZStack {
+            
+            VStack {
+                ZoneTitlePage()
+                
+               SearchBar(text: $searchText)
+                    .padding(.top, -20)
+                
+              
+                NavigationView{
+               
+                    
+                    /*
+                     version avec barre de recherche
+                     ForEach(zoneListVM.model.zones.filter({
+                         searchText.isEmpty ? true :
+                             $0.zone_libelle.contains(searchText) //$0 = 1er paramètre
+                     })){ zone in
+                        .......
+                         
+                    }
 
-            ForEach(zoneListVM.model.zones){ zone in
-                ZoneItem(ZoneVM(model: zone))
-           }
-
-            ErrorViewZone(state: zoneListState)
-           
-        }.navigationTitle("Zones du festival")
-      
+                     */
+                    List{
+                        ForEach(zoneListVM.model.zones){ zone in
+                         
+                            NavigationLink(
+                                destination: GameListView(gameList: GameList(games: zone.jeux))
+                            ){
+                               ZoneDetails(zone: zone)
+                            }
+                             
+                       }
+                    }
+                   
+                   
+                }.navigationViewStyle(StackNavigationViewStyle())
+                ErrorViewZone(state: zoneListState)
+            }
+        }
     }
 }
 
@@ -88,6 +119,17 @@ struct ErrorViewZone : View{
     }
 }
 
+
+struct ZoneTitlePage : View {
+    var body: some View{
+        return Text("Zones du festival")
+            .font(.largeTitle)
+            .fontWeight(.semibold)
+            .padding(.bottom, 20)
+            .foregroundColor(Color.init(red: 0/255, green: 32/255, blue: 101/255))
+            .padding(.top, 10)
+    }
+}
 
 /*
 struct ZoneListView_Previews: PreviewProvider {

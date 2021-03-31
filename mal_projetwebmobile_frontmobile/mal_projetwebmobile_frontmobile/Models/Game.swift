@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Game : ObservableObject {
+class Game : ObservableObject, Identifiable {
     
     private(set) var j_titre: String
     private(set) var j_duree: String

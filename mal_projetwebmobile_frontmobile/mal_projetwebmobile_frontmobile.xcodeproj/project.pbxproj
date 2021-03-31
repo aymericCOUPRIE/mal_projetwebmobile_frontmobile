@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		936BAB7E26152FB100361A33 /* FestivalGameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936BAB7D26152FB100361A33 /* FestivalGameListView.swift */; };
+		936BAB83261532E100361A33 /* ZoneDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936BAB82261532E100361A33 /* ZoneDetails.swift */; };
+		936BAB882615362500361A33 /* GameDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936BAB872615362500361A33 /* GameDetails.swift */; };
 		9379EAE726149117006916B5 /* HostingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379EAE626149117006916B5 /* HostingTabBar.swift */; };
 		9379EAF92614C7D0006916B5 /* ZoneListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379EAF82614C7D0006916B5 /* ZoneListVM.swift */; };
 		9379EAFE2614C9CE006916B5 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379EAFD2614C9CE006916B5 /* Reservation.swift */; };
@@ -15,6 +18,7 @@
 		9379EB0E2614CA68006916B5 /* TypeJeu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379EB0D2614CA68006916B5 /* TypeJeu.swift */; };
 		9379EB232614CEBF006916B5 /* ZoneList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379EB222614CEBF006916B5 /* ZoneList.swift */; };
 		9379EB282614D0A0006916B5 /* ZoneListIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379EB272614D0A0006916B5 /* ZoneListIntent.swift */; };
+		9379EB3C26151FE7006916B5 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379EB3B26151FE7006916B5 /* SearchBar.swift */; };
 		93C025F026126EFF00492B81 /* FestivalIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C025EF26126EFF00492B81 /* FestivalIntent.swift */; };
 		93C025F526126F2A00492B81 /* FestivalVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C025F426126F2A00492B81 /* FestivalVM.swift */; };
 		93D894242600B87A0089ECB0 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D894232600B87A0089ECB0 /* KeyboardResponder.swift */; };
@@ -27,7 +31,6 @@
 		93D894762609EE450089ECB0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D894752609EE450089ECB0 /* Game.swift */; };
 		93D8947E2609EE510089ECB0 /* GameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8947D2609EE510089ECB0 /* GameVM.swift */; };
 		93D89495260B92120089ECB0 /* EditorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D89494260B92120089ECB0 /* EditorItem.swift */; };
-		BC57F2852615053E0013BEAE /* ZoneItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC57F2842615053E0013BEAE /* ZoneItem.swift */; };
 		BC57F28A2615058B0013BEAE /* ZoneVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC57F2892615058B0013BEAE /* ZoneVM.swift */; };
 		BC6F5F602613D47100241649 /* GameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F5F5F2613D47100241649 /* GameList.swift */; };
 		BC6F5F692613D87600241649 /* GameListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F5F682613D87600241649 /* GameListVM.swift */; };
@@ -67,6 +70,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		936BAB7D26152FB100361A33 /* FestivalGameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalGameListView.swift; sourceTree = "<group>"; };
+		936BAB82261532E100361A33 /* ZoneDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneDetails.swift; sourceTree = "<group>"; };
+		936BAB872615362500361A33 /* GameDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetails.swift; sourceTree = "<group>"; };
 		9379EAE626149117006916B5 /* HostingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingTabBar.swift; sourceTree = "<group>"; };
 		9379EAF82614C7D0006916B5 /* ZoneListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneListVM.swift; sourceTree = "<group>"; };
 		9379EAFD2614C9CE006916B5 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
@@ -75,6 +81,7 @@
 		9379EB0D2614CA68006916B5 /* TypeJeu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeJeu.swift; sourceTree = "<group>"; };
 		9379EB222614CEBF006916B5 /* ZoneList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneList.swift; sourceTree = "<group>"; };
 		9379EB272614D0A0006916B5 /* ZoneListIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneListIntent.swift; sourceTree = "<group>"; };
+		9379EB3B26151FE7006916B5 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		93C025EF26126EFF00492B81 /* FestivalIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalIntent.swift; sourceTree = "<group>"; };
 		93C025F426126F2A00492B81 /* FestivalVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalVM.swift; sourceTree = "<group>"; };
 		93D894232600B87A0089ECB0 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
@@ -87,7 +94,6 @@
 		93D894752609EE450089ECB0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		93D8947D2609EE510089ECB0 /* GameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVM.swift; sourceTree = "<group>"; };
 		93D89494260B92120089ECB0 /* EditorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorItem.swift; sourceTree = "<group>"; };
-		BC57F2842615053E0013BEAE /* ZoneItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneItem.swift; sourceTree = "<group>"; };
 		BC57F2892615058B0013BEAE /* ZoneVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneVM.swift; sourceTree = "<group>"; };
 		BC6F5F5F2613D47100241649 /* GameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameList.swift; sourceTree = "<group>"; };
 		BC6F5F682613D87600241649 /* GameListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListVM.swift; sourceTree = "<group>"; };
@@ -140,15 +146,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9379EB3A26151F97006916B5 /* Not used anymore.. */ = {
+			isa = PBXGroup;
+			children = (
+				93D8944D2601462B0089ECB0 /* ViewRouter.swift */,
+				93D8942B26011E350089ECB0 /* LoginView.swift */,
+				93D8943E260143C30089ECB0 /* MotherView.swift */,
+			);
+			path = "Not used anymore..";
+			sourceTree = "<group>";
+		};
 		93835FBF25FE0982003C2167 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9379EB3A26151F97006916B5 /* Not used anymore.. */,
 				93D89493260B91F20089ECB0 /* Zone */,
 				93D89492260B91E60089ECB0 /* Game */,
 				93D89491260B91C60089ECB0 /* Editor */,
-				93D8943E260143C30089ECB0 /* MotherView.swift */,
 				BCDE6B1D25F9745100F710DE /* StartView.swift */,
-				93D8942B26011E350089ECB0 /* LoginView.swift */,
+				9379EAE626149117006916B5 /* HostingTabBar.swift */,
+				9379EB3B26151FE7006916B5 /* SearchBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				93D894612609EBD20089ECB0 /* GameListView.swift */,
+				936BAB7D26152FB100361A33 /* FestivalGameListView.swift */,
+				936BAB872615362500361A33 /* GameDetails.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -206,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				93D8946B2609EC040089ECB0 /* ZoneListView.swift */,
-				BC57F2842615053E0013BEAE /* ZoneItem.swift */,
+				936BAB82261532E100361A33 /* ZoneDetails.swift */,
 			);
 			path = Zone;
 			sourceTree = "<group>";
@@ -240,8 +259,6 @@
 				93835FC025FE0994003C2167 /* ViewModels */,
 				93835FBF25FE0982003C2167 /* Views */,
 				BCDE6B1B25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift */,
-				93D8944D2601462B0089ECB0 /* ViewRouter.swift */,
-				9379EAE626149117006916B5 /* HostingTabBar.swift */,
 				93D894232600B87A0089ECB0 /* KeyboardResponder.swift */,
 				BCDE6B1F25F9745200F710DE /* Assets.xcassets */,
 				BCDE6B2425F9745200F710DE /* Info.plist */,
@@ -425,9 +442,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9379EB3C26151FE7006916B5 /* SearchBar.swift in Sources */,
 				BCDE6B1E25F9745100F710DE /* StartView.swift in Sources */,
 				BCDE6B1C25F9745100F710DE /* mal_projetwebmobile_frontmobileApp.swift in Sources */,
 				BCD713682610CD400002FAAA /* Zone.swift in Sources */,
+				936BAB83261532E100361A33 /* ZoneDetails.swift in Sources */,
 				BCD713542610C61C0002FAAA /* Festival.swift in Sources */,
 				93D894622609EBD20089ECB0 /* GameListView.swift in Sources */,
 				93D8946C2609EC040089ECB0 /* ZoneListView.swift in Sources */,
@@ -435,6 +454,7 @@
 				BCE8CE27260A421C0047CB27 /* Editor.swift in Sources */,
 				9379EB082614CA41006916B5 /* SuiviJeu.swift in Sources */,
 				93C025F026126EFF00492B81 /* FestivalIntent.swift in Sources */,
+				936BAB882615362500361A33 /* GameDetails.swift in Sources */,
 				BC6F5F692613D87600241649 /* GameListVM.swift in Sources */,
 				BCE8CE35260A454B0047CB27 /* EditorListViewIntent.swift in Sources */,
 				9379EB032614CA14006916B5 /* Societe.swift in Sources */,
@@ -455,9 +475,9 @@
 				BC6F5F602613D47100241649 /* GameList.swift in Sources */,
 				9379EAFE2614C9CE006916B5 /* Reservation.swift in Sources */,
 				9379EAE726149117006916B5 /* HostingTabBar.swift in Sources */,
-				BC57F2852615053E0013BEAE /* ZoneItem.swift in Sources */,
 				93C025F526126F2A00492B81 /* FestivalVM.swift in Sources */,
 				BCE8CE3D260A4F720047CB27 /* EditorList.swift in Sources */,
+				936BAB7E26152FB100361A33 /* FestivalGameListView.swift in Sources */,
 				9379EB282614D0A0006916B5 /* ZoneListIntent.swift in Sources */,
 				93D8944E2601462B0089ECB0 /* ViewRouter.swift in Sources */,
 				BCE8CE47260A5C2E0047CB27 /* ServerHelper.swift in Sources */,
