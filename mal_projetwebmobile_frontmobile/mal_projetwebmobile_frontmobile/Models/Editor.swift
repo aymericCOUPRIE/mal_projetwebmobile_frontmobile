@@ -9,6 +9,8 @@ import Foundation
 
 
 class Editor : Identifiable, ObservableObject, Encodable, Equatable {
+    
+    
     static func == (lhs: Editor, rhs: Editor) -> Bool {
         return lhs.nomEditeur == rhs.nomEditeur
     }

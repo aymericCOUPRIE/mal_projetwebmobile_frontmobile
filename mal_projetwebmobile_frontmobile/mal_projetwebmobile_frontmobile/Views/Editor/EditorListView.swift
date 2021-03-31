@@ -7,23 +7,11 @@
 
 import SwiftUI
 import Combine
-/*
-struct EditorListView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
 
-struct EditorListView_Previews: PreviewProvider {
-    static var previews: some View {
-        EditorListView()
-    }
-}
 
 
 struct EditorListView: View {
   
-    
 
     @ObservedObject var editorListVM : EditorListVM
     var intent : EditorListViewIntent
@@ -72,7 +60,7 @@ struct EditorListView: View {
                     }
                 }
             }
-            ErrorView(state: editorListState)
+            //ErrorView(state: editorListState)
         }
     }
     
@@ -85,6 +73,7 @@ struct EditorListView_Previews: PreviewProvider {
     }
 }
 
+/*
 struct ErrorView : View{
     let state : EditorListState
     var body: some View{
@@ -107,7 +96,8 @@ struct ErrorView : View{
         }
     }
 }
-
+ */
+/*
 struct ErrorMessage : View{
     let error :  Error
     var body: some View{
@@ -130,6 +120,5 @@ struct ErrorMessage : View{
     }
     
 }
+ */
 
-
-*/
