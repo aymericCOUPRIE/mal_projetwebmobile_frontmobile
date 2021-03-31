@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-/*
+
 class EditorListViewIntent {
     
     @ObservedObject var editorList : EditorListVM
@@ -18,7 +18,7 @@ class EditorListViewIntent {
     }
     
     func httpJsonLoaded(result: Result<[Editor],HttpRequestError>){
-        switch result {
+        switch 	result {
         case let .success(data):
        
             editorList.editorListState = .loaded(data)
@@ -38,4 +38,4 @@ class EditorListViewIntent {
 
     }
 }
-*/
+

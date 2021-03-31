@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-/*
+
 
 enum EditorListState {
     case ready
@@ -68,4 +68,4 @@ class EditorListVM: ObservableObject, EditorListDelegate {
     
     
 }
-*/
+
