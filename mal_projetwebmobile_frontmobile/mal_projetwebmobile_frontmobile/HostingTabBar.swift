@@ -15,8 +15,11 @@ struct HostingTabBar: View {
           case zoneList
       }
       
-      @State private var selectedTab: Tab = .home
-    @ObservedObject var festivalVM : FestivalVM = FestivalVM(Festival(date : Date()))
+    
+    //@StateObject var festivalVM : FestivalVM = FestivalVM(Festival(date: "2020-05-06"))
+    
+    @State private var selectedTab: Tab = .home
+    @StateObject var festivalVM : FestivalVM = FestivalVM(Festival(date : "2000-00-00"))
         
     
     var body: some View {
