@@ -35,12 +35,14 @@ struct EditorListView: View {
         switch state {
         case .ready:
             self.intent.loadEditorList(url: url)
+        case .new:
+            break
         default:
             return
         }
     }
     
-    var url : String = "/server/festivals/allInfosNextFestival"
+    var url : String = "http://localhost:3000/server/festivals/gameByEditor"
 
  
     var body: some View {
@@ -55,8 +57,9 @@ struct EditorListView: View {
                             destination: EditorDetail(editor)
                         )
                          */
+                        Text("bbbbbbbbb")
 
-                            EditorItem(editor)
+                        //EditorItem(editor)
                     }
                 }
             }
@@ -67,12 +70,14 @@ struct EditorListView: View {
 
 }
 
+/*
 struct EditorListView_Previews: PreviewProvider {
     static var previews: some View {
         EditorListView(editorListVM: EditorListVM(EditorList()))
     }
 }
-
+*/
+ 
 /*
 struct ErrorView : View{
     let state : EditorListState

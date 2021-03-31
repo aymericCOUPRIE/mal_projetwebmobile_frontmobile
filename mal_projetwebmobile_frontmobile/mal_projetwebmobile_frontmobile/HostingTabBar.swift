@@ -21,7 +21,7 @@ struct HostingTabBar: View {
     @State private var selectedTab: Tab = .home
     @StateObject var festivalVM : FestivalVM = FestivalVM(Festival(date : "2000-00-00"))
     @StateObject var zoneListVM : ZoneListVM = ZoneListVM(ZoneList(zones: [Zone]()))
-        
+    @StateObject var editorListVM : EditorListVM = EditorListVM(EditorList(editors: [Editor]()))
     
     var body: some View {
         TabView(selection: $selectedTab){
@@ -38,7 +38,7 @@ struct HostingTabBar: View {
                                Image(systemName: "die.face.5")
                            }
                        
-                       //EditorListView()
+                        EditorListView(editorListVM: self.editorListVM)
                            .tag(2)
                            .tabItem{
                                Text("Éditeurs")

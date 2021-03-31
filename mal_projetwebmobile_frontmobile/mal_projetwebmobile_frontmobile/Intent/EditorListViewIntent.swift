@@ -17,7 +17,7 @@ class EditorListViewIntent {
         self.editorList = editorList
     }
     
-    func httpJsonLoaded(result: Result<[Editor],HttpRequestError>){
+    func httpJsonLoaded(result: Result<EditorList,HttpRequestError>){
         switch 	result {
         case let .success(data):
        
@@ -29,7 +29,7 @@ class EditorListViewIntent {
     
     func loadEditorList(url: String) {
         editorList.editorListState = .loading(url)
-       // ServerHelper.loadEditorsFromAPI(url: url, endofrequest: httpJsonLoaded)
+        ServerHelper.loadEditorsFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
 }
 
