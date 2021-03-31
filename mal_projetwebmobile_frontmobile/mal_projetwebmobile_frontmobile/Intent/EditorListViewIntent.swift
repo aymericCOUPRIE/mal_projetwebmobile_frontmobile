@@ -28,14 +28,8 @@ class EditorListViewIntent {
     }
     
     func loadEditorList(url: String) {
-        
-    
         editorList.editorListState = .loading(url)
-        
-        //ServerHelper.loadItemsFromAPI(url: url, endofrequest: httpJsonLoaded)
-        
-        
-
+        ServerHelper.loadEditorsFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
 }
 

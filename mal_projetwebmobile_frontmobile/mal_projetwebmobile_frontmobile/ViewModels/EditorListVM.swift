@@ -15,13 +15,15 @@ enum EditorListState {
     case loading(String)
     case loaded([Editor])
     case loadingError(Error)
+    case new([Editor])
     
     var description: String{
         switch self {
-            case .ready                   : return "ready"
-            case .loading(let s)          : return "loading: \(s)"
-            case .loaded(let editors)     : return "loaded: \(editors.count) editors"
-            case .loadingError(let error) : return "loadingError: Error loading -> \(error)"
+            case .ready                     : return "ready"
+            case .loading(let s)            : return "loading: \(s)"
+            case .loaded(let editors)       : return "loaded: \(editors.count) editors"
+            case .loadingError(let error)   : return "loadingError: Error loading -> \(error)"
+            case .new(let editors)          : return "Editor data was retreived \(editors)"
         }
     }
 }
