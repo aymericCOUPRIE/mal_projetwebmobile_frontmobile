@@ -30,13 +30,13 @@ class FestivalVM: ObservableObject{
     
     private(set) var model: Festival
     
-    @Published var FestivalState : FestivalState = .ready{
+    @Published var festivalState : FestivalState = .ready{
         didSet{
-            switch self.FestivalState {
+            switch self.festivalState {
             case let .loaded(data):
                 print(data)
-                //self.model.new(festival: data)
-                //FestivalState = .new(model)
+                self.model.new(date : data.date)
+                festivalState = .new(model)
             case .loadingError:
                 print("LOADING ERROR")
             default:

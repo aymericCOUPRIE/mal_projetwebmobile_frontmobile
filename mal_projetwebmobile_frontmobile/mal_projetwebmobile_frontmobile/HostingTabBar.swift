@@ -9,15 +9,16 @@ import SwiftUI
 
 
 struct TabBarApp: App {
-    
+    /*
     //@StateObject var editorList : EditorListVM = EditorListVM(EditorList())
-    @StateObject var festivalVM : FestivalVM = FestivalVM(Festival(societes: [Societe]()))
-    
+    //@StateObject var festivalVM : FestivalVM = FestivalVM(Festival(societes: [Societe]()))
+    */
     var body: some Scene {
         WindowGroup{
-            HostingTabBar(festivalVM: festivalVM)
+            //HostingTabBar(festivalVM: festivalVM)
         }
     }
+    /*
 }
 
 struct HostingTabBar: View {
@@ -75,13 +76,14 @@ struct HostingTabBar: View {
                 }
         }
     }
-    
+    */
 }
 
 
-
+/*
 struct HostingTabBar_Previews: PreviewProvider {
     static var previews: some View {
         HostingTabBar(festivalVM: FestivalVM(Festival(societes: [Societe]())))
     }
 }
+ */

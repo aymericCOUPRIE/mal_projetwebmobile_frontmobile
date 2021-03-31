@@ -9,38 +9,40 @@ import SwiftUI
 
 struct StartView: View {
     
-    @EnvironmentObject var viewRouter: ViewRouter //je lie ma vue au viewRouter
+    //@EnvironmentObject var viewRouter: ViewRouter //je lie ma vue au viewRouter
     
-    //@ObservedObject var festivalVM: FestivalVM
+    @ObservedObject var festivalVM: FestivalVM
     
-    //var intent : FestivalIntent
+    var intent : FestivalIntent
     
-    var url : String = "/server/festivals/allInfosNextFestival"
+    var url : String = "https://mal-festival.herokuapp.com/server/festivals/closest"
     
-    init(/*festivalVM : FestivalVM*/){
-        //self.festivalVM = festivalVM
-        //self.intent = FestivalIntent(festival: festivalVM)
-        //let _ = self.festivalVM.$festivalState.sink(receiveValue: stateChanged)
+    init(festivalVM : FestivalVM){
+        self.festivalVM = festivalVM
+        self.intent = FestivalIntent(festival: festivalVM)
+        let _ = self.festivalVM.$festivalState.sink(receiveValue: stateChanged)
     }
 
-/*private var festivalState : FestivalState{
-    return self.festivalVM.festivalState
-}
-
-var festival : Festival {
-    return self.festivalVM.festival
-}
-
-func stateChanged(state: FestivalState){
-    
-    switch state {
-    case .ready:
-        self.intent.loadFestival(url)//au tout début je charge mon festival
-    default:
-        return
+    private var festivalState : FestivalState{
+        return self.festivalVM.festivalState
     }
-}
- */
+
+    /*var festival : Festival {
+        return self.festivalVM.festival
+    }*/
+
+    func stateChanged(state: FestivalState){
+        
+        switch state {
+        case .ready:
+            self.intent.loadFestival(url : url)//au tout début je charge mon festival
+        case .new:
+            print("festival data created")
+        default:
+            return
+        }
+    }
+
 
 
     
@@ -79,13 +81,14 @@ func stateChanged(state: FestivalState){
 
 
 
-
+/*
 struct StartView_Previews: PreviewProvider {
     static var previews: some View {
         StartView()
         //StartView(festivalVM: FestivalVM(Festival(societes: [Societe]))).environmentObject(ViewRouter())//passe un router en paramètres
     }
 }
+ */
 
 
 

@@ -23,15 +23,15 @@ class FestivalIntent {
         switch result{
         case let .success(data):
             print("success : \(data)")
-            festival.FestivalState = .loaded(data)
+            festival.festivalState = .loaded(data)
         case let .failure(error):
-            festival.FestivalState = .loadingError(error)
+            festival.festivalState = .loadingError(error)
         }
     }
     
     func loadFestival(url : String){
         print("Je suis dans FestivalIntent, url : \(url)")
-        festival.FestivalState = .loading(url)
+        festival.festivalState = .loading(url)
         ServerHelper.loadFestivalFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
 }

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+/*
 let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
 
 //pour tester
@@ -14,7 +14,7 @@ let storedEmail = "m@me.com"
 let storedPassword = "a"
 
 struct LoginView: View {
-    @EnvironmentObject var viewRouter: ViewRouter //je lie ma vue au viewRouter
+    //@EnvironmentObject var viewRouter: ViewRouter //je lie ma vue au viewRouter
     
     @State var email: String="" //stocker ce que l'utilisateur va mettre dans le textfield
     //le @State permet à la vue d'afficher automatique le contenu de la var quand il change
@@ -72,14 +72,14 @@ struct LoginView: View {
 }
 
 #if DEBUG
-
+/*
 struct login_Previews: PreviewProvider {
     static var previews: some View {
         LoginView().environmentObject(ViewRouter())//passe un router en paramètres
     }
 }
 #endif
-
+*/
 struct LogoImage : View {
     var body: some View{
         return Image("logo")
@@ -128,3 +128,4 @@ struct LogoImage : View {
     }
         
 }
+ */

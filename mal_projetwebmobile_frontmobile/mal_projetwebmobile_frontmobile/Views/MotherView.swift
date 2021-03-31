@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/*
 enum Page {
     case startView
     case loginView
@@ -19,7 +20,7 @@ struct MotherView: View {
     
     //@StateObject var editorList : EditorListVM = EditorListVM(EditorList())
     
-    @StateObject var festivalVM : FestivalVM = FestivalVM(Festival(societes: [Societe]()))
+    @StateObject var festivalVM : FestivalVM = FestivalVM(Festival(date: Date))
 
     var body: some View {
         VStack{
@@ -44,3 +45,5 @@ struct MotherView_Previews: PreviewProvider {
         MotherView().environmentObject(ViewRouter())//on lui passe une instance de ViewRouter
     }
 }
+
+ */

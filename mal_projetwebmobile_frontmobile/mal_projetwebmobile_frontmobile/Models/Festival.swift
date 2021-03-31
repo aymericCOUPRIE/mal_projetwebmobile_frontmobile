@@ -12,16 +12,17 @@ import Foundation
 class Festival: ObservableObject {
     
     
- 
-    private(set) var societes = [Societe]()
+    private(set) var date : Date
     
-    init(societes: [Societe]){
-        self.societes = societes
+    init(date : Date){
+        self.date = date
     }
     
-    func new(societes: [Societe]) {
-        self.societes = societes
+    
+    func new(date: Date) {
+        self.date = date
     }
+
     
     
 }

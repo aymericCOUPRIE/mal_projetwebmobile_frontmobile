@@ -18,8 +18,9 @@ struct GameListView: View {
     }
 }
 
+/*
 struct GameListView_Previews: PreviewProvider {
     static var previews: some View {
         GameListView(listGames: )
     }
-}
+}*/
