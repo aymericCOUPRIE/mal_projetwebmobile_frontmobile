@@ -37,9 +37,14 @@ struct StartView: View {
         case .ready:
             self.intent.loadFestival(url : url)//au tout début je charge mon festival
             break
-        case .new:
+            
+        case .loading(url):
+            print("I am loadinf the date of the closest festival")
             break
-            //print("festival data created")
+        case .new:
+            print("festival data created")
+            break
+           
         default:
             return
         }
@@ -124,7 +129,6 @@ struct RDV : View {
     init(festivalVM : FestivalVM) {
         self.festival = festivalVM
         print("FESTIVAL COURANT", festival.model.date)
-       
     }
     
     var body: some View {

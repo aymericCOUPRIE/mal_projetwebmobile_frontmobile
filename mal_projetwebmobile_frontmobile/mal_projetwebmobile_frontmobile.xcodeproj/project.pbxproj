@@ -27,6 +27,8 @@
 		93D894762609EE450089ECB0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D894752609EE450089ECB0 /* Game.swift */; };
 		93D8947E2609EE510089ECB0 /* GameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8947D2609EE510089ECB0 /* GameVM.swift */; };
 		93D89495260B92120089ECB0 /* EditorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D89494260B92120089ECB0 /* EditorItem.swift */; };
+		BC57F2852615053E0013BEAE /* ZoneItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC57F2842615053E0013BEAE /* ZoneItem.swift */; };
+		BC57F28A2615058B0013BEAE /* ZoneVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC57F2892615058B0013BEAE /* ZoneVM.swift */; };
 		BC6F5F602613D47100241649 /* GameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F5F5F2613D47100241649 /* GameList.swift */; };
 		BC6F5F692613D87600241649 /* GameListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F5F682613D87600241649 /* GameListVM.swift */; };
 		BC6F5F6E2613D9A800241649 /* GameListViewIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F5F6D2613D9A800241649 /* GameListViewIntent.swift */; };
@@ -85,6 +87,8 @@
 		93D894752609EE450089ECB0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		93D8947D2609EE510089ECB0 /* GameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVM.swift; sourceTree = "<group>"; };
 		93D89494260B92120089ECB0 /* EditorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorItem.swift; sourceTree = "<group>"; };
+		BC57F2842615053E0013BEAE /* ZoneItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneItem.swift; sourceTree = "<group>"; };
+		BC57F2892615058B0013BEAE /* ZoneVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneVM.swift; sourceTree = "<group>"; };
 		BC6F5F5F2613D47100241649 /* GameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameList.swift; sourceTree = "<group>"; };
 		BC6F5F682613D87600241649 /* GameListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListVM.swift; sourceTree = "<group>"; };
 		BC6F5F6D2613D9A800241649 /* GameListViewIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewIntent.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 				93C025F426126F2A00492B81 /* FestivalVM.swift */,
 				BC6F5F682613D87600241649 /* GameListVM.swift */,
 				9379EAF82614C7D0006916B5 /* ZoneListVM.swift */,
+				BC57F2892615058B0013BEAE /* ZoneVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				93D8946B2609EC040089ECB0 /* ZoneListView.swift */,
+				BC57F2842615053E0013BEAE /* ZoneItem.swift */,
 			);
 			path = Zone;
 			sourceTree = "<group>";
@@ -425,6 +431,7 @@
 				BCD713542610C61C0002FAAA /* Festival.swift in Sources */,
 				93D894622609EBD20089ECB0 /* GameListView.swift in Sources */,
 				93D8946C2609EC040089ECB0 /* ZoneListView.swift in Sources */,
+				BC57F28A2615058B0013BEAE /* ZoneVM.swift in Sources */,
 				BCE8CE27260A421C0047CB27 /* Editor.swift in Sources */,
 				9379EB082614CA41006916B5 /* SuiviJeu.swift in Sources */,
 				93C025F026126EFF00492B81 /* FestivalIntent.swift in Sources */,
@@ -448,6 +455,7 @@
 				BC6F5F602613D47100241649 /* GameList.swift in Sources */,
 				9379EAFE2614C9CE006916B5 /* Reservation.swift in Sources */,
 				9379EAE726149117006916B5 /* HostingTabBar.swift in Sources */,
+				BC57F2852615053E0013BEAE /* ZoneItem.swift in Sources */,
 				93C025F526126F2A00492B81 /* FestivalVM.swift in Sources */,
 				BCE8CE3D260A4F720047CB27 /* EditorList.swift in Sources */,
 				9379EB282614D0A0006916B5 /* ZoneListIntent.swift in Sources */,
