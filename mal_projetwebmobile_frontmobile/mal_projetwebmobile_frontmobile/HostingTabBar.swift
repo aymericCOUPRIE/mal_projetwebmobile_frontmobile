@@ -37,7 +37,7 @@ struct HostingTabBar: View {
                                Image(systemName: "die.face.5")
                            }
                        
-                       EditorListView()
+                       //EditorListView()
                            .tag(2)
                            .tabItem{
                                Text("Éditeurs")

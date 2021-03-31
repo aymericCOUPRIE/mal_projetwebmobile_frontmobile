@@ -117,7 +117,7 @@ struct LogoImage : View {
 
 struct RDV : View {
     
-    var festival : FestivalVM
+    @ObservedObject var festival : FestivalVM
     
     init(festivalVM : FestivalVM) {
         self.festival = festivalVM
@@ -125,7 +125,7 @@ struct RDV : View {
     }
     
     var body: some View {
-        return Text("Rendez-vous le \(self.festival.model.date)")
+        return Text("Rendez-vous le \(festival.model.date)")
     }
 }
  

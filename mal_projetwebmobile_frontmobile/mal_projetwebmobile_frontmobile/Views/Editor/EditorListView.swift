@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Combine
-
+/*
 struct EditorListView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
@@ -20,13 +20,13 @@ struct EditorListView_Previews: PreviewProvider {
     }
 }
 
-/*
+
 struct EditorListView: View {
   
     
 
     @ObservedObject var editorListVM : EditorListVM
-   var intent : EditorListViewIntent
+    var intent : EditorListViewIntent
     
     init(editorListVM : EditorListVM){
         self.editorListVM = editorListVM
