@@ -9,11 +9,7 @@ import Foundation
 import SwiftUI
 
 
-class EditorVM: Identifiable, Equatable {
-    
-    static func == (lhs: EditorVM, rhs: EditorVM) -> Bool {
-        lhs.nomEditeur == rhs.nomEditeur
-    }
+class EditorVM: Identifiable {
 
     @ObservedObject private(set) var model: Editor
     

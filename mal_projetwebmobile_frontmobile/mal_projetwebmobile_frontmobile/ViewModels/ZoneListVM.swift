@@ -30,6 +30,9 @@ class ZoneListVM: ObservableObject{
     
     private(set) var model: ZoneList
     
+    @Published private(set) var zones = [ZoneVM]()
+    
+    
     @Published var zoneListState : ZoneListState = .ready{
         didSet{
             switch self.zoneListState {
@@ -49,4 +52,13 @@ class ZoneListVM: ObservableObject{
         self.model = zoneList
     }
     
+    func new(zones : [Zone]) {
+        self.model.new(zones: zones)
+    }
+    
+    func newZoneList() {
+        for zone in self.model.zones {
+            self.zones.append(ZoneVM(model: zone))
+        }
+    }
 }

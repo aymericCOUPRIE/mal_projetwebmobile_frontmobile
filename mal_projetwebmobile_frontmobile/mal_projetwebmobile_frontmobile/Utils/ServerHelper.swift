@@ -196,6 +196,7 @@ struct ServerHelper {
         return ZoneList(zones: zones)
         
     }
+ 
     
      //@Escaping -- Fait appel à une fonction ailleurs (asynchrone)
      static func loadZonesFromAPI(url surl: String, endofrequest: @escaping (Result<ZoneList, HttpRequestError>) -> Void){
@@ -239,6 +240,7 @@ struct ServerHelper {
                  
                 print("DECODED RESPONSE", decodedResponse)
                  
+                
                  let listZonesData : ListZonesData = (decodedResponse as! ListZonesData)
                  
                  guard let zones = self.zoneListDataToZoneList(data : listZonesData) else{
@@ -251,6 +253,7 @@ struct ServerHelper {
                  DispatchQueue.main.async {
                      endofrequest(.success(zones))
                  }
+ 
              }
              else{
                  DispatchQueue.main.async {

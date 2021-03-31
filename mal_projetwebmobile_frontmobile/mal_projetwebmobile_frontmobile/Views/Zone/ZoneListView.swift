@@ -24,6 +24,10 @@ struct ZoneListView: View {
         return self.zoneListVM.zoneListState
     }
     
+    var zones : [ZoneVM] {
+        return self.zoneListVM.zones
+    }
+    
     func stateChanged(state: ZoneListState){
         
         switch state {
@@ -42,11 +46,9 @@ struct ZoneListView: View {
     
     var body: some View {
         NavigationView{
-           ForEach(self.zoneListVM.model.zones){ zone in
-                Text("\(zone.zone_libelle)")
-           
-             }
-         
+            ForEach(zoneListVM.model.zones){ zone in
+                ZoneItem(ZoneVM(model: zone))
+           }
             ErrorViewZone(state: zoneListState)
            
         }.navigationTitle("Zones du festival")
