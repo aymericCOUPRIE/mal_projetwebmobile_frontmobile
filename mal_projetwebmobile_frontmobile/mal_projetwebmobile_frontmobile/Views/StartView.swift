@@ -124,6 +124,7 @@ struct RDV : View {
     init(festivalVM : FestivalVM) {
         self.festival = festivalVM
         print("FESTIVAL COURANT", festival.model.date)
+       
     }
     
     var body: some View {

@@ -7,15 +7,18 @@
 
 import Foundation
 
-class Zone: ObservableObject, Encodable, Equatable, Identifiable {
-    static func == (lhs: Zone, rhs: Zone) -> Bool {
-        return lhs.zone_libelle == rhs.zone_libelle
+class Zone: ObservableObject, Identifiable {
+ 
+    private(set) var zone_libelle : String
+    private(set) var jeux : [Game]
+    
+    init(zone_libelle: String, jeux: [Game]) {
+        self.zone_libelle = zone_libelle
+        self.jeux = jeux
     }
     
-    
-    private(set) var zone_libelle : String
-    
-    init(zone_libelle: String) {
+    func new(zone_libelle: String, jeux: [Game]) {
         self.zone_libelle = zone_libelle
+        self.jeux = jeux
     }
 }

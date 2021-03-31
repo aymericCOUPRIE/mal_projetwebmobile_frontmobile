@@ -20,6 +20,7 @@ struct HostingTabBar: View {
     
     @State private var selectedTab: Tab = .home
     @StateObject var festivalVM : FestivalVM = FestivalVM(Festival(date : "2000-00-00"))
+    @StateObject var zoneListVM : ZoneListVM = ZoneListVM(ZoneList(zones: [Zone]()))
         
     
     var body: some View {
@@ -43,7 +44,7 @@ struct HostingTabBar: View {
                                Text("Éditeurs")
                                Image(systemName: "person.2.square.stack")
                            }
-                       ZoneListView()
+                        ZoneListView(zoneListVM: self.zoneListVM)
                            .tag(3)
                            .tabItem{
                                Text("Zones")

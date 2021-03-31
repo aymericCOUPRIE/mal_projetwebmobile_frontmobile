@@ -25,10 +25,9 @@ enum GameListState {
     }
 }
 
-class GameListVM : ObservableObject, GameListDelegate {
+class GameListVM : ObservableObject{
 
     private(set) var model : GameList
-    private(set) var games = [GameVM]()
 
     @Published var gameListState : GameListState = .ready {
         didSet {
@@ -46,16 +45,6 @@ class GameListVM : ObservableObject, GameListDelegate {
 
     init(gameList: GameList) {
         self.model = gameList
-        self.model.delegate = self
-    }
-
-    func newGameList() {
-        
-        for game in self.model.games {
-            self.games.append(GameVM(model: game))
-        }
-        
-        self.gameListState = .new(self.games)
     }
 
 }

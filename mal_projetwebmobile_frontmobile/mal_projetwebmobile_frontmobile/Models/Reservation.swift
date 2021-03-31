@@ -2,12 +2,13 @@
 //  Reservation.swift
 //  mal_projetwebmobile_frontmobile
 //
-//  Created by user190207 on 3/28/21.
+//  Created by marine teroitin on 31/03/2021.
 //
 
 import Foundation
 
-class Reservation: ObservableObject, Identifiable, Equatable, Encodable {
+
+class Reservation: ObservableObject{
     static func == (lhs: Reservation, rhs: Reservation) -> Bool {
         return lhs.res_id == rhs.res_id
     }

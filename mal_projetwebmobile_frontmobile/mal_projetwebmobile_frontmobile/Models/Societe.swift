@@ -2,12 +2,13 @@
 //  Societe.swift
 //  mal_projetwebmobile_frontmobile
 //
-//  Created by user190207 on 3/28/21.
+//  Created by marine teroitin on 31/03/2021.
 //
+
 
 import Foundation
 
-class Societe: ObservableObject, Identifiable, Equatable, Encodable {
+class Societe: ObservableObject {
     static func == (lhs: Societe, rhs: Societe) -> Bool {
         return lhs.soc_nom == rhs.soc_nom
     }

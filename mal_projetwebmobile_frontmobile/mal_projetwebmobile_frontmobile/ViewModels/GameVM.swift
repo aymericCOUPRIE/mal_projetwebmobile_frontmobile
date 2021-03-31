@@ -6,23 +6,16 @@
 //
 
 import Foundation
-import SwiftUI
-
-
-
+import Combine
 
 class GameVM : ObservableObject {
     
-    @ObservedObject private(set) var model : Game
+    private(set) var model : Game
     
-    var j_id: Int {
-        return model.j_id
+
+    init(_ game : Game) {
+        self.model = game
     }
-    
-    init(model: Game) {
-        self.model = model
-    }
-   
     
     
 }
