@@ -19,6 +19,8 @@ struct ZoneListView: View {
         self.intent = ZoneListIntent(zoneList: zoneListVM)
         let _ = self.zoneListVM.$zoneListState.sink(receiveValue: stateChanged)
     }
+    
+    
 
     private var zoneListState : ZoneListState{
         return self.zoneListVM.zoneListState
@@ -34,7 +36,12 @@ struct ZoneListView: View {
         case .ready:
             self.intent.loadZones(url : url)//au tout début je charge mes données
             break
-        case .new:  //j'ai ma liste de zones.
+            
+        case .loading(url):
+            print("I am loading ZoneList")
+            break
+        case .new:
+            print("I have your ZoneList data!")
             break
           
         default:
@@ -46,12 +53,15 @@ struct ZoneListView: View {
     
     var body: some View {
         NavigationView{
+
             ForEach(zoneListVM.model.zones){ zone in
                 ZoneItem(ZoneVM(model: zone))
            }
+
             ErrorViewZone(state: zoneListState)
            
         }.navigationTitle("Zones du festival")
+      
     }
 }
 
@@ -77,6 +87,7 @@ struct ErrorViewZone : View{
         }
     }
 }
+
 
 /*
 struct ZoneListView_Previews: PreviewProvider {
