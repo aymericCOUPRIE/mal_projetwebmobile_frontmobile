@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct mal_projetwebmobile_frontmobileApp: App {
     
-    @StateObject var festivalVM : FestivalVM = FestivalVM(Festival(date: Date()))
+    //@StateObject var festivalVM : FestivalVM = FestivalVM(Festival(date: Date()))
 
     
     init() {}
@@ -20,10 +20,14 @@ struct mal_projetwebmobile_frontmobileApp: App {
 
     var body: some Scene {
         WindowGroup {
-            StartView(festivalVM: festivalVM)
+         
+            
             //vue au lancement de l'application
            // MotherView().environmentObject(viewRouter) //on crée une instance de ViewRouter et on l'injecte dans toute la hiérarchie des vues en tant qu'EnvironmentObject au lancement de l'application.
+           
+            // StartView(festivalVM: festivalVM)
             
+            HostingTabBar()
         }
     }
 }
