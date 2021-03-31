@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct mal_projetwebmobile_frontmobileApp: App {
     
-    @StateObject var festivalVM : FestivalVM = FestivalVM(Festival(date: Date()))
+    @StateObject var festivalVM : FestivalVM = FestivalVM(Festival(date: "2020-05-06"))
 
     
     init() {}

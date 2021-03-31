@@ -8,10 +8,12 @@
 import Foundation
 
 
-
+struct ListFestival: Codable {
+    var closestFestival : [FestivalData]
+}
 
 struct FestivalData: Codable {
-    var fes_date: Date
+    var fes_date: String
     
     
     
@@ -75,13 +77,17 @@ struct ServerHelper {
     
     
     
-    static func festivalDataToFestival(data: FestivalData) -> Festival? {
-        print("DATE MCLC", data.fes_date)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-JJ"
-        if let date = dateFormatter.date(from: "2020-20-05") {
-            return Festival(date: date)
+    static func festivalDataToFestival(data: ListFestival) -> Festival? {
+        //print("DATE MCLC", data.fes_date)
+        //let dateFormatter = DateFormatter()
+        //dateFormatter.dateFormat = "YYYY-MM-JJ"
+        //if let date = dateFormatter.date(from: "2020-20-05") {
+        
+        for fdata in data.closestFestival {
+            return Festival(date: fdata.fes_date)
         }
+        
+        //}
         return nil
     }
 
@@ -111,11 +117,10 @@ struct ServerHelper {
                 
                 print("DATA", String(data: data, encoding: .utf8))
                 
-                
                 var decodedData : Decodable? = nil
                 
                 do {
-                decodedData = try JSONDecoder().decode(FestivalData.self, from: data)
+                decodedData = try JSONDecoder().decode(ListFestival.self, from: data)
                 } catch let jsonError as NSError {
                     print("JSON decode failed: \(jsonError.localizedDescription)")
                 }
@@ -128,13 +133,14 @@ struct ServerHelper {
                 }
                 
                 
-                var festivalData : FestivalData
+                var festivalData : ListFestival
               
-                festivalData = (decodedResponse as! FestivalData)
+                festivalData = (decodedResponse as! ListFestival)
                 
-                print("FESTIVAL", festivalData)
+                print("FESTIVAL", festivalData.closestFestival[0].fes_date)
                    
-                guard let festival = self.festivalDataToFestival(data: festivalData) else{
+                
+                guard let festival = self.festivalDataToFestival(data : festivalData) else{
                     DispatchQueue.main.async { endofrequest(.failure(.JsonDecodingFailed)) }
                     return
                 }
@@ -144,6 +150,8 @@ struct ServerHelper {
                 DispatchQueue.main.async {
                     endofrequest(.success(festival))
                 }
+ 
+ 
  
             }
             else{

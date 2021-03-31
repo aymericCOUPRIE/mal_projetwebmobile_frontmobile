@@ -51,7 +51,7 @@ struct StartView: View {
             VStack {
                 WelcomeText()
                 LogoImage()
-                //RDV()
+                RDV(festivalVM : festivalVM)
                 
                 
                 /*
@@ -112,13 +112,20 @@ struct LogoImage : View {
             }
 }
 
-/*
+
 struct RDV : View {
+    
+    var festival : FestivalVM
+    
+    init(festivalVM : FestivalVM) {
+        self.festival = festivalVM
+    }
+    
     var body: some View {
-        return Text(Rendez-vous le \(festival.model.date))
+        return Text("Rendez-vous le \(festival.model.date)")
     }
 }
- */
+ 
 
 struct ErrorView : View{
     let state : FestivalState

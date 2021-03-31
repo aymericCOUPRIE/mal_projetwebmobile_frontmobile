@@ -12,14 +12,14 @@ import Foundation
 class Festival: ObservableObject {
     
     
-    private(set) var date : Date
+    private(set) var date : String
     
-    init(date : Date){
+    init(date : String){
         self.date = date
     }
     
     
-    func new(date: Date) {
+    func new(date: String) {
         self.date = date
     }
 
