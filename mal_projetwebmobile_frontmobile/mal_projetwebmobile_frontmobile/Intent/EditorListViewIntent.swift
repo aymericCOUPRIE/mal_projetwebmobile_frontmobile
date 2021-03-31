@@ -32,7 +32,7 @@ class EditorListViewIntent {
     
         editorList.editorListState = .loading(url)
         
-        ServerHelper.loadEditorsFromAPI(url: url, endofrequest: httpJsonLoaded)
+        //ServerHelper.loadItemsFromAPI(url: url, endofrequest: httpJsonLoaded)
         
         
 

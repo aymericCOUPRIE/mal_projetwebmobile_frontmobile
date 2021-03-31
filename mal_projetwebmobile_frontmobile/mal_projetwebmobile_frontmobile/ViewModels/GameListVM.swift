@@ -52,7 +52,7 @@ class GameListVM : ObservableObject, GameListDelegate {
     func newGameList() {
         
         for game in self.model.games {
-            self.games.append(GameVM(game))
+            self.games.append(GameVM(model: game))
         }
         
         self.gameListState = .new(self.games)

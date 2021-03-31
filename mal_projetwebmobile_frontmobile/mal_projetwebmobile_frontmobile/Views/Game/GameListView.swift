@@ -11,7 +11,7 @@ struct GameListView: View {
     
     @ObservedObject var listGames : GameVM
     
-    var intent : 
+    //var intent : 
     
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
@@ -20,6 +20,6 @@ struct GameListView: View {
 
 struct GameListView_Previews: PreviewProvider {
     static var previews: some View {
-        GameListView()
+        GameListView(listGames: )
     }
 }

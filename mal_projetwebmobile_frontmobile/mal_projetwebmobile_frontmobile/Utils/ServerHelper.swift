@@ -61,6 +61,10 @@ struct EditorData: Codable {
 
 struct ServerHelper {
 
+    
+    static func gameDataToGame(data: [GameData]) -> [Game]? {
+        
+    }
     static func festivalDataToFestival(data: [FestivalData]) -> Festival?{
         
         var societes = [Societe]()
@@ -119,31 +123,26 @@ struct ServerHelper {
         
     
     //@Escaping -- Fait appel à une fonction ailleurs (asynchrone)
-    static func loadFestivalFromAPI(url surl: String, endofrequest: @escaping (Result<Festival, HttpRequestError>) -> Void){
+    static func loadGamesFromAPI(url surl: String, endofrequest: @escaping (Result<[Game], HttpRequestError>) -> Void){
         
         //vérifier l'url
         guard let url = URL(string: surl) else {
             endofrequest(.failure(.badURL(surl)))
             return
         }
-        self.loadFestivalFromAPI(url: url, endofrequest: endofrequest) //appel la méthode d'en dessous
+        self.loadGamesFromAPI(url: url, endofrequest: endofrequest) //appel la méthode d'en dessous
     }
     
-    static func loadFestivalFromAPI(url: URL, endofrequest: @escaping (Result<Festival, HttpRequestError>) -> Void){
-        self.loadFestivalFromJsonData(url: url, endofrequest: endofrequest, ServerApiRequest: true) //appel la méthode d'en dessous
+    static func loadGamesFromAPI(url: URL, endofrequest: @escaping (Result<[Game], HttpRequestError>) -> Void){
+        self.loadGamesFromJsonData(url: url, endofrequest: endofrequest, ServerApiRequest: true) //appel la méthode d'en dessous
     }
 
-    private static func loadFestivalFromJsonData(url: URL, endofrequest: @escaping (Result<Festival, HttpRequestError>) -> Void, ServerApiRequest: Bool = true){
+    private static func loadGamesFromJsonData(url: URL, endofrequest: @escaping (Result<[Game], HttpRequestError>) -> Void, ServerApiRequest: Bool = true){
         
         let request = URLRequest(url: url)
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data {
-                
-                
-                print("DATA", data)
-                print("DATAS", String(data: data, encoding: .utf8)!)
-                
                 
                 var decodedData : Decodable? = nil
                 
@@ -160,21 +159,21 @@ struct ServerHelper {
                 }
                 
                 
-                var festivalsListData : [FestivalData]
+                var gameListData : [GameData]
               
-                festivalsListData = (decodedResponse as! [FestivalData])
+                gameListData = (decodedResponse as! [GameData])
                 
-                print("FESTIVALS", festivalsListData)
+                print("FESTIVALS", gameListData)
                    
-                guard let festival = self.festivalDataToFestival(data: festivalsListData) else{
+                guard let games = self.gameDataToGame(data: gameListData) else{
                     DispatchQueue.main.async { endofrequest(.failure(.JsonDecodingFailed)) }
                     return
                 }
                 
-                print("MODEL", festival)
+                print("MODEL", games)
                 
                 DispatchQueue.main.async {
-                    endofrequest(.success(festival))
+                    endofrequest(.success(games))
                 }
  
             }

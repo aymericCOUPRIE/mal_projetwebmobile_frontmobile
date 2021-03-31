@@ -28,7 +28,7 @@ class GameListViewIntent {
     
     func loadGameList(url: String) {
         gameList.gameListState = .loading(url)
-        ServerHelper.loadGamesFromAPI(url: url, endofrequest: httpJsonLoaded)
+        //ServerHelper.loadGamesFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
     
     

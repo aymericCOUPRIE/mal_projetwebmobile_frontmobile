@@ -35,8 +35,8 @@ class FestivalVM: ObservableObject{
             switch self.FestivalState {
             case let .loaded(data):
                 print(data)
-                self.model.new(festival: data)
-                FestivalState = .new(model)
+                //self.model.new(festival: data)
+                //FestivalState = .new(model)
             case .loadingError:
                 print("LOADING ERROR")
             default:

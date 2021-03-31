@@ -11,20 +11,19 @@ struct StartView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter //je lie ma vue au viewRouter
     
-    @ObservedObject var festivalVM: FestivalVM
+    //@ObservedObject var festivalVM: FestivalVM
     
-    var intent : FestivalIntent
+    //var intent : FestivalIntent
     
     var url : String = "/server/festivals/allInfosNextFestival"
     
-    init(festivalVM : FestivalVM){
-        self.festivalVM = festivalVM
-        self.intent = FestivalIntent(festival: festivalVM)
-        let _ = self.festivalVM.$festivalState.sink(receiveValue: stateChanged)
-       }
+    init(/*festivalVM : FestivalVM*/){
+        //self.festivalVM = festivalVM
+        //self.intent = FestivalIntent(festival: festivalVM)
+        //let _ = self.festivalVM.$festivalState.sink(receiveValue: stateChanged)
     }
 
-private var festivalState : FestivalState{
+/*private var festivalState : FestivalState{
     return self.festivalVM.festivalState
 }
 
@@ -41,6 +40,7 @@ func stateChanged(state: FestivalState){
         return
     }
 }
+ */
 
 
     
@@ -70,7 +70,7 @@ func stateChanged(state: FestivalState){
                  */
                 
             }.padding()
-            ErrorView(state: FestivalState)
+            //ErrorView(state: FestivalState)
             
         }
     }
@@ -82,7 +82,8 @@ func stateChanged(state: FestivalState){
 
 struct StartView_Previews: PreviewProvider {
     static var previews: some View {
-        StartView(festivalVM: FestivalVM(Festival(societes: [Societe]))).environmentObject(ViewRouter())//passe un router en paramètres
+        StartView()
+        //StartView(festivalVM: FestivalVM(Festival(societes: [Societe]))).environmentObject(ViewRouter())//passe un router en paramètres
     }
 }
 

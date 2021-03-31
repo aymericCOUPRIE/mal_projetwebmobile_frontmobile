@@ -6,7 +6,7 @@
 //
 
 import Foundation
-/*
+
 protocol EditorListDelegate {
     func newEditorList()
 }
@@ -23,4 +23,4 @@ class EditorList: ObservableObject {
         self.delegate?.newEditorList()
     }
 }
-*/
+
