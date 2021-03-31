@@ -16,11 +16,15 @@ class EditorList: ObservableObject {
     
     var delegate: EditorListDelegate?
     
-    private(set) var editors = [Editor]()
+    private(set) var editors: [Editor]
+    
+    init(editors: [Editor]) {
+        self.editors = editors
+    }
     
     func new(editors: [Editor]) {
         self.editors = editors
-        self.delegate?.newEditorList()
+        //self.delegate?.newEditorList()
     }
 }
 

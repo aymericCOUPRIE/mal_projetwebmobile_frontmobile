@@ -13,15 +13,15 @@ import Combine
 enum EditorListState {
     case ready
     case loading(String)
-    case loaded([Editor])
+    case loaded(EditorList)
     case loadingError(Error)
-    case new([Editor])
+    case new(EditorList)
     
     var description: String{
         switch self {
             case .ready                     : return "ready"
             case .loading(let s)            : return "loading: \(s)"
-            case .loaded(let editors)       : return "loaded: \(editors.count) editors"
+            case .loaded(let editors)       : return "loaded: \(editors) editors"
             case .loadingError(let error)   : return "loadingError: Error loading -> \(error)"
             case .new(let editors)          : return "Editor data was retreived \(editors)"
         }
@@ -42,7 +42,7 @@ class EditorListVM: ObservableObject, EditorListDelegate {
             //data -- tableau d'editor
             switch self.editorListState {
             case .loaded(let data):
-                self.model.new(editors: data)
+                self.model.new(editors: data.editors)
             case .loadingError:
                 print("LOADING ERROR")
             default:

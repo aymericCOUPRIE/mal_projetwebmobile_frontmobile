@@ -8,18 +8,15 @@
 import Foundation
 
 
-class Editor : Identifiable, ObservableObject, Encodable, Equatable {
-    
-    
-    static func == (lhs: Editor, rhs: Editor) -> Bool {
-        return lhs.nomEditeur == rhs.nomEditeur
-    }
+class Editor : Identifiable, ObservableObject {
     
 
     private(set) var nomEditeur: String
+    private(set) var games: [Game]
     
-    init(nomEditeur: String) {
+    init(nomEditeur: String, games: [Game]) {
         self.nomEditeur = nomEditeur
+        self.games = games
     }
        
 }

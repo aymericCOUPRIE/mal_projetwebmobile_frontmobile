@@ -35,12 +35,14 @@ struct EditorListView: View {
         switch state {
         case .ready:
             self.intent.loadEditorList(url: url)
+        case .new:
+            break
         default:
             return
         }
     }
     
-    var url : String = "/server/festivals/allInfosNextFestival"
+    var url : String = "http://localhost:3000/server/festivals/gameByEditor"
 
  
     var body: some View {
@@ -48,15 +50,15 @@ struct EditorListView: View {
         VStack{
             ZStack{
                 List{
-                    ForEach(self.editorListVM.editors){ editor in
+                    ForEach(editorListVM.model.editors){ editor in
                         /*
                          Plus tard quand on voudra voir le détail d'un éditeur -> la liste de tous ces jeux
                          NavigationLink(
                             destination: EditorDetail(editor)
                         )
                          */
-
-                            EditorItem(editor)
+                        
+                        EditorItem(EditorVM(editor))
                     }
                 }
             }
@@ -67,12 +69,14 @@ struct EditorListView: View {
 
 }
 
+/*
 struct EditorListView_Previews: PreviewProvider {
     static var previews: some View {
         EditorListView(editorListVM: EditorListVM(EditorList()))
     }
 }
-
+*/
+ 
 /*
 struct ErrorView : View{
     let state : EditorListState
