@@ -50,16 +50,15 @@ struct EditorListView: View {
         VStack{
             ZStack{
                 List{
-                    ForEach(self.editorListVM.editors){ editor in
+                    ForEach(editorListVM.model.editors){ editor in
                         /*
                          Plus tard quand on voudra voir le détail d'un éditeur -> la liste de tous ces jeux
                          NavigationLink(
                             destination: EditorDetail(editor)
                         )
                          */
-                        Text("bbbbbbbbb")
-
-                        //EditorItem(editor)
+                        
+                        EditorItem(EditorVM(editor))
                     }
                 }
             }

@@ -391,9 +391,12 @@ struct ServerHelper {
     
     static func editorGameDataToEditorGame(data: [EditorGameData]) -> EditorList? {
         var editors = [Editor]()
+        
+        var nom : String = ""
         for edata in data {
             var games = [Game]()
-            var nomEditeur: String = edata.nomEditeur
+            
+            let nomEditeur: String = edata.nomEditeur
             for jdata in data {
                 if(jdata.nomEditeur == nomEditeur) {
                     games.append(Game(j_titre: jdata.j_titre,
@@ -405,7 +408,17 @@ struct ServerHelper {
                     ))
                 }
             }
-            editors.append(Editor(nomEditeur: edata.nomEditeur, games: games))
+            
+            var bool : Bool = false
+            for editor in editors {
+                if(editor.nomEditeur == nomEditeur){
+                    bool = true
+                }
+            }
+            
+            if(!bool) {
+                editors.append(Editor(nomEditeur: edata.nomEditeur, games: games))
+            }
             
         }
         var editorsList : EditorList = EditorList(editors: editors)

@@ -21,7 +21,4 @@ class ZoneList : ObservableObject {
         self.zones = zones
     }
     
-    
-
-    
 }

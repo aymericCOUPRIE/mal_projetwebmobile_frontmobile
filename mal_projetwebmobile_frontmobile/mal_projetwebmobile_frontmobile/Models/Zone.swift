@@ -21,4 +21,6 @@ class Zone: ObservableObject, Identifiable {
         self.zone_libelle = zone_libelle
         self.jeux = jeux
     }
+    
+    
 }
