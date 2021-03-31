@@ -55,6 +55,7 @@ struct StartView: View {
                 LogoImage()
                 RDV(festivalVM : festivalVM)
                 
+                ErrorView(state: festivalState)
                 
                 /*
                 WhoAreYouText()
@@ -72,9 +73,9 @@ struct StartView: View {
                 visiteurButtonContent()
                 }
                  */
-                
+               
             }.padding()
-            //ErrorView(state: FestivalState)
+           
             
         }
     }
@@ -100,6 +101,7 @@ struct WelcomeText : View {
             .font(.largeTitle)
             .fontWeight(.semibold)
             .padding(.bottom, 20)
+            .foregroundColor(Color.init(red: 0/255, green: 32/255, blue: 101/255))
     }
 }
 
@@ -126,6 +128,8 @@ struct RDV : View {
     
     var body: some View {
         return Text("Rendez-vous le \(festival.model.date)")
+            .foregroundColor(Color.init(red: 232/255, green: 111/255, blue: 184/255))
+        
     }
 }
  
@@ -146,7 +150,7 @@ struct ErrorView : View{
                 EmptyView()
             }
             if case let .loaded(data) = state{
-                //Text("\(data.count) editors found!")    changer pour dire qu'on a pas trouve de festival
+              Text("Festival found!");
             }
             Spacer()
         }
