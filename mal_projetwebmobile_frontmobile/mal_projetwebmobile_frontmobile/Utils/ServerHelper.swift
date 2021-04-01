@@ -88,6 +88,22 @@ struct EditorGameData: Codable {
 
 
 
+struct FestivalGamesData : Codable {
+    var suivi_jeus: [SuiviJeuData]
+}
+
+struct SuiviJeuData : Codable {
+    var zone : ZoneNomData
+    var jeu : GameData
+}
+
+struct ZoneNomData : Codable {
+    var zo_libelle : String
+}
+
+
+
+
 
 struct ServerHelper {
       
@@ -190,7 +206,7 @@ struct ServerHelper {
             
             for gData in zData.suivi_jeus{
                 
-                let game : Game = Game(j_titre: gData.jeu.j_titre, j_duree: gData.jeu.j_duree, j_nbMaxJoueur: gData.jeu.j_nbMaxJoueurs, j_nbMinJoueurs: gData.jeu.j_nbMinJoueurs, j_editor: gData.jeu.societe.soc_nom, j_type: gData.jeu.type_jeu.typJ_libelle)
+                let game : Game = Game(j_titre: gData.jeu.j_titre, j_duree: gData.jeu.j_duree, j_ageMin : gData.jeu.j_ageMin ,j_nbMaxJoueur: gData.jeu.j_nbMaxJoueurs, j_nbMinJoueurs: gData.jeu.j_nbMinJoueurs, j_editor: gData.jeu.societe.soc_nom, j_type: gData.jeu.type_jeu.typJ_libelle)
                 
                 
                 gameListe.append(game)
@@ -296,11 +312,20 @@ struct ServerHelper {
     
     
     
-    /*
-    static func gameDataToGame(data: [GameData]) -> [Game]? {
-            return
+    
+    static func gameDataToGame(data: [FestivalGamesData]) -> GameList? {
+        var games = [Game]()
+        
+        for sdata in data {
+            for gdata in sdata.suivi_jeus {
+                
+                gdata.
+            }
+        }
+        
+        return GameList(games: games)
     }
- */
+ 
     
     
     
@@ -334,11 +359,12 @@ struct ServerHelper {
 
                 
                 do {
-                decodedData = try JSONDecoder().decode([FestivalData].self, from: data)
+                decodedData = try JSONDecoder().decode([FestivalGamesData].self, from: data)
                 } catch let jsonError as NSError {
                     print("JSON decode failed: \(jsonError.localizedDescription)")
                 }
-                                
+                        
+                print("DECODED DATASSSS", decodedData)
                 
                 guard let decodedResponse = decodedData else {
                     DispatchQueue.main.async { endofrequest(.failure(.JsonDecodingFailed)) }
@@ -346,13 +372,13 @@ struct ServerHelper {
                 }
                 
                 
-                var gameListData : [GameData]
+                var gameListData : [FestivalGamesData]
               
-                gameListData = (decodedResponse as! [GameData])
+                gameListData = (decodedResponse as! [FestivalGamesData])
                 
-                //print("FESTIVALS", gameListData)
+                print("FESTIVALS", gameListData)
                    
-                /*guard let games = self.gameDataToGame(data: gameListData) else{
+                guard let games = self.gameDataToGame(data: gameListData) else{
                     DispatchQueue.main.async { endofrequest(.failure(.JsonDecodingFailed)) }
                     return
                 }
@@ -362,7 +388,7 @@ struct ServerHelper {
                 DispatchQueue.main.async {
                     endofrequest(.success(games))
                 }
- */
+ 
  
             }
             else{
@@ -404,6 +430,7 @@ struct ServerHelper {
                 if(jdata.nomEditeur == nomEditeur) {
                     games.append(Game(j_titre: jdata.j_titre,
                                       j_duree: jdata.j_duree,
+                                      j_ageMin: jdata.j_ageMin,
                                       j_nbMaxJoueur: jdata.j_nbMaxJoueurs,
                                       j_nbMinJoueurs: jdata.j_nbMinJoueurs,
                                       j_editor : jdata.nomEditeur,
