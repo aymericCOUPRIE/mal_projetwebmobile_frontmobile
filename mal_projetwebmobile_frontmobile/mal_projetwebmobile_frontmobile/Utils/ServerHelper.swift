@@ -83,7 +83,7 @@ struct EditorGameData: Codable {
     var j_nbMaxJoueurs: Int
     var j_nbMinJoueurs: Int
     var j_lienNotice: String
-    //var type_jeu: GameTypeData
+    var type_jeu: String
 }
 
 
@@ -434,7 +434,7 @@ struct ServerHelper {
                                       j_nbMaxJoueur: jdata.j_nbMaxJoueurs,
                                       j_nbMinJoueurs: jdata.j_nbMinJoueurs,
                                       j_editor : jdata.nomEditeur,
-                                      j_type: ""
+                                      j_type: jdata.type_jeu
                     ))
                 }
             }
