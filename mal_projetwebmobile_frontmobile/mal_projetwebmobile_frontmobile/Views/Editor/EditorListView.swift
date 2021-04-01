@@ -43,7 +43,7 @@ struct EditorListView: View {
         }
     }
     
-    var url : String = "http://localhost:3000/server/festivals/gameByEditor"
+    var url : String = "https://mal-festival.herokuapp.com/server/festivals/gameByEditor"
 
  
     var body: some View {

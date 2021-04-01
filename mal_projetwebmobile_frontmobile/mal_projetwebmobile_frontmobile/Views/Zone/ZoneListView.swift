@@ -14,7 +14,7 @@ struct ZoneListView: View {
     @ObservedObject var zoneListVM: ZoneListVM
     var intent : ZoneListIntent
     
-    var url : String = "http://localhost:3000/server/festivals/closest/gamesByZone"
+    var url : String = "https://mal-festival.herokuapp.com/server/festivals/closest/gamesByZone"
     
     init(zoneListVM : ZoneListVM){
         self.zoneListVM = zoneListVM

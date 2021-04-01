@@ -21,8 +21,14 @@ struct StartView: View {
         self.festivalVM = festivalVM
         self.intent = FestivalIntent(festival: festivalVM)
         let _ = self.festivalVM.$festivalState.sink(receiveValue: stateChanged)
+        //loadInit()
     }
 
+    
+    func loadInit() {
+        self.intent.loadFestival(url : url)//au tout début je charge mon festival
+    }
+    
     private var festivalState : FestivalState{
         return self.festivalVM.festivalState
     }
@@ -37,14 +43,11 @@ struct StartView: View {
         case .ready:
             self.intent.loadFestival(url : url)//au tout début je charge mon festival
             break
-            
-        case .loading(url):
-            print("I am loadinf the date of the closest festival")
-            break
+        /*
         case .new:
-            print("festival data created")
+            intent.festivalLoaded()
             break
-           
+        */
         default:
             return
         }

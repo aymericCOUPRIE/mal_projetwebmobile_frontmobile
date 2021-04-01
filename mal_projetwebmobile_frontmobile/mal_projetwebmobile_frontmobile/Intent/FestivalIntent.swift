@@ -17,7 +17,9 @@ class FestivalIntent {
         self.festival = festival
     }
     
-  
+    func festivalLoaded(){
+        festival.festivalState = .ready
+    }
     
     func httpJsonLoaded(result: Result<Festival, HttpRequestError>){
         switch result{

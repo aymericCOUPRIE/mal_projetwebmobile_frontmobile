@@ -14,7 +14,7 @@ struct FestivalGameListView: View {
     @ObservedObject var listGamesVM : GameListVM
     
     var intent : GameListViewIntent
-    var url : String = "http://localhost:3000/server/jeuxFestival/allGames"
+    var url : String = "https://mal-festival.herokuapp.com/server/jeuxFestival/allGames"
     
     init(listGamesVM : GameListVM) {
         self.listGamesVM = listGamesVM
