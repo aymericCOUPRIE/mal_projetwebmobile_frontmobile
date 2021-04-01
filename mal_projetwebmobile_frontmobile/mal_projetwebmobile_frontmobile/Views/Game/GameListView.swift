@@ -9,6 +9,8 @@ import SwiftUI
 
 
 struct GameListView: View {
+    //pour la barre de recherche
+    @State private var searchText = ""
     
     var gameList : GameList
 
@@ -16,10 +18,14 @@ struct GameListView: View {
     var body: some View {
         ZStack{
             VStack{
-                //GameListeTitlePage()
-                NavigationView{
+                GameListeTitlePage()
+                SearchBar(text: $searchText)
+                    .padding(.top, -20)
                     List{
-                        ForEach(gameList.games){
+                        ForEach(gameList.games.filter({
+                            searchText.isEmpty ? true :
+                                $0.j_titre.lowercased().contains(searchText.lowercased())
+                        })){
                             game in
                             NavigationLink(
                                 destination:
@@ -35,7 +41,7 @@ struct GameListView: View {
                             }
                         }
                     }
-                }.navigationViewStyle(StackNavigationViewStyle())
+              
             }
         }
     }

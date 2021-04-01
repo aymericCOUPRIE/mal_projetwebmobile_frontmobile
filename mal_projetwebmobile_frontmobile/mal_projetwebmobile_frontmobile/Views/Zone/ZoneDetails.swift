@@ -19,7 +19,7 @@ struct ZoneDetails: View {
                  Spacer()
              }
              HStack{
-                 Text("\(zone.jeux.count)")
+                 Text("Nombre de jeux: \(zone.jeux.count)")
                  Spacer()
              }
          }

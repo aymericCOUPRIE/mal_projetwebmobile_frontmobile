@@ -23,7 +23,7 @@ struct ZoneListView: View {
     }
     
     
-
+    
     private var zoneListState : ZoneListState{
         return self.zoneListVM.zoneListState
     }
@@ -45,50 +45,39 @@ struct ZoneListView: View {
         case .new:
             print("I have your ZoneList data!")
             break
-          
+            
         default:
             return
         }
     }
-
+    
     
     var body: some View {
         ZStack {
             
             VStack {
-                ZoneTitlePage()
                 
-               SearchBar(text: $searchText)
-                    .padding(.top, -20)
                 
-              
+                
                 NavigationView{
-               
-                    
-                    /*
-                     version avec barre de recherche
-                     ForEach(zoneListVM.model.zones.filter({
-                         searchText.isEmpty ? true :
-                             $0.zone_libelle.contains(searchText) //$0 = 1er paramètre
-                     })){ zone in
-                        .......
-                         
-                    }
-
-                     */
-                    List{
-                        ForEach(zoneListVM.model.zones){ zone in
-                         
-                            NavigationLink(
-                                destination: GameListView(gameList: GameList(games: zone.jeux))
-                            ){
-                               ZoneDetails(zone: zone)
+                    VStack{
+                        
+                   
+                        ZoneTitlePage()
+                        
+                        SearchBar(text: $searchText)
+                            .padding(.top, -20)
+                        List{
+                            ForEach(zoneListVM.model.zones.filter( { searchText.isEmpty ? true : $0.zone_libelle.lowercased().contains(searchText.lowercased()) })){ zone in
+                                NavigationLink(
+                                    destination: GameListView(gameList: GameList(games: zone.jeux))
+                                ){
+                                    ZoneDetails(zone: zone)
+                                }
                             }
-                             
-                       }
+                        }
+                        
                     }
-                   
-                   
                 }.navigationViewStyle(StackNavigationViewStyle())
                 ErrorViewZone(state: zoneListState)
             }
@@ -112,7 +101,7 @@ struct ErrorViewZone : View{
                 EmptyView()
             }
             if case let .loaded(data) = state{
-              Text("Zones found!");
+                Text("\(data.zones.count) zone(s) trouvée! ");
             }
             Spacer()
         }
@@ -132,9 +121,9 @@ struct ZoneTitlePage : View {
 }
 
 /*
-struct ZoneListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ZoneListView()
-    }
-}
-*/
+ struct ZoneListView_Previews: PreviewProvider {
+ static var previews: some View {
+ ZoneListView()
+ }
+ }
+ */
