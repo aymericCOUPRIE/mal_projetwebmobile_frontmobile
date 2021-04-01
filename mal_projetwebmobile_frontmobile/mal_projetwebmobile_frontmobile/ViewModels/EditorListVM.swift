@@ -43,6 +43,7 @@ class EditorListVM: ObservableObject, EditorListDelegate {
             switch self.editorListState {
             case .loaded(let data):
                 self.model.new(editors: data.editors)
+                editorListState = .new(model)
             case .loadingError:
                 print("LOADING ERROR")
             default:

@@ -35,6 +35,7 @@ class GameListVM : ObservableObject{
             switch self.gameListState {
             case .loaded(let data):
                 self.model.new(games: data.games)
+                gameListState = .new(model)
             case .loadingError:
                 print("LOADING ERROR")
             default:

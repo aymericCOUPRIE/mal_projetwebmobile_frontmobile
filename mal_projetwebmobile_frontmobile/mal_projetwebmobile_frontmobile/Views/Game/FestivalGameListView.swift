@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FestivalGameListView: View {
+    //pour la barre de recherche
+    @State private var searchText = ""
     
     @ObservedObject var listGamesVM : GameListVM
     
@@ -45,7 +47,61 @@ struct FestivalGameListView: View {
     }
     
     var body: some View {
-        GameListView(gameList: GameList(games: listGamesVM.model.games))
+        //GameListView(gameList: GameList(games: listGamesVM.model.games))
+        ZStack {
+            
+            VStack {
+                NavigationView{
+                    VStack{
+                        GameListeTitlePage()
+                        SearchBar(text: $searchText)
+                            .padding(.top, -20)
+                        List{
+                            ForEach(listGamesVM.model.games.filter({
+                                searchText.isEmpty ? true :
+                                    $0.j_titre.lowercased().contains(searchText.lowercased())
+                            })){  game in
+                                NavigationLink(
+                                    destination :
+                                        GameDetails(game: game)
+                                ){
+                                        VStack{
+                                            HStack{
+                                                Text("\(game.j_titre)")
+                                    
+                                            }
+                                        }
+                                }
+                            }
+                        }
+                    }
+                }.navigationViewStyle(StackNavigationViewStyle())
+                ErrorViewGame(state: listGameState)
+            }
+        }
+    }
+}
+
+struct  ErrorViewGame : View{
+    let state : GameListState
+    var body: some View{
+        VStack{
+            Spacer()
+            switch state{
+            case .loading:
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .blue))
+                    .scaleEffect(3)
+            case .loadingError(let error):
+                ErrorMessage(error: error)
+            default:
+                EmptyView()
+            }
+            if case let .loaded(data) = state{
+                Text("\(data.games.count) jeu(x) trouvée! ");
+            }
+            Spacer()
+        }
     }
 }
 

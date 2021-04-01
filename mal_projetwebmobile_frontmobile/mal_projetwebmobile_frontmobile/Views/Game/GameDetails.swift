@@ -27,9 +27,9 @@ struct GameDetails: View {
             }
             Group{
             Spacer()
-            Text("À partir de \(game.j_ageMin)")
+            Text("À partir de \(game.j_ageMin) ans")
             Spacer()
-            Text("Se joue entre : \(game.j_nbMinJoueurs) et \(game.j_nbMaxJoueur).")
+            Text("Se joue entre : \(game.j_nbMinJoueurs) et \(game.j_nbMaxJoueur) joueurs.")
             Spacer()
             Text("Durée d'une partie: \(game.j_duree)")
             }
