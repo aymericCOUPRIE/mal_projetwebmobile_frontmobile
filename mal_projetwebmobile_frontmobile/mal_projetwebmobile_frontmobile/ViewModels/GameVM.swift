@@ -21,6 +21,10 @@ class GameVM : ObservableObject, Identifiable{
         return model.j_duree
     }
     
+    var ageMin : Int {
+        return model.j_ageMin
+    }
+    
     var nbMaxJoueur : Int {
         return model.j_nbMaxJoueur
     }

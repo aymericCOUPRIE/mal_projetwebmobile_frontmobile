@@ -190,13 +190,13 @@ struct ServerHelper {
             
             for gData in zData.suivi_jeus{
                 
-                var game : Game = Game(j_titre: gData.jeu.j_titre, j_duree: gData.jeu.j_duree, j_nbMaxJoueur: gData.jeu.j_nbMaxJoueurs, j_nbMinJoueurs: gData.jeu.j_nbMinJoueurs, j_editor: gData.jeu.societe.soc_nom, j_type: gData.jeu.type_jeu.typJ_libelle)
+                let game : Game = Game(j_titre: gData.jeu.j_titre, j_duree: gData.jeu.j_duree, j_nbMaxJoueur: gData.jeu.j_nbMaxJoueurs, j_nbMinJoueurs: gData.jeu.j_nbMinJoueurs, j_editor: gData.jeu.societe.soc_nom, j_type: gData.jeu.type_jeu.typJ_libelle)
                 
                 
                 gameListe.append(game)
             }
             
-            var zone : Zone = Zone(zone_libelle: zData.zo_libelle, jeux: gameListe)
+            let zone : Zone = Zone(zone_libelle: zData.zo_libelle, jeux: gameListe)
             
             zones.append(zone)
             
@@ -307,7 +307,7 @@ struct ServerHelper {
         
     
     //@Escaping -- Fait appel à une fonction ailleurs (asynchrone)
-    static func loadGamesFromAPI(url surl: String, endofrequest: @escaping (Result<[Game], HttpRequestError>) -> Void){
+    static func loadGamesFromAPI(url surl: String, endofrequest: @escaping (Result<GameList, HttpRequestError>) -> Void){
         
         //vérifier l'url
         guard let url = URL(string: surl) else {
@@ -317,11 +317,11 @@ struct ServerHelper {
         self.loadGamesFromAPI(url: url, endofrequest: endofrequest) //appel la méthode d'en dessous
     }
     
-    static func loadGamesFromAPI(url: URL, endofrequest: @escaping (Result<[Game], HttpRequestError>) -> Void){
+    static func loadGamesFromAPI(url: URL, endofrequest: @escaping (Result<GameList, HttpRequestError>) -> Void){
         self.loadGamesFromJsonData(url: url, endofrequest: endofrequest, ServerApiRequest: true) //appel la méthode d'en dessous
     }
 
-    private static func loadGamesFromJsonData(url: URL, endofrequest: @escaping (Result<[Game], HttpRequestError>) -> Void, ServerApiRequest: Bool = true){
+    private static func loadGamesFromJsonData(url: URL, endofrequest: @escaping (Result<GameList, HttpRequestError>) -> Void, ServerApiRequest: Bool = true){
         
         let request = URLRequest(url: url)
         
@@ -329,6 +329,9 @@ struct ServerHelper {
             if let data = data {
                 
                 var decodedData : Decodable? = nil
+                
+                print("DATA GAMES", String(data: data, encoding: .utf8))
+
                 
                 do {
                 decodedData = try JSONDecoder().decode([FestivalData].self, from: data)
@@ -447,7 +450,7 @@ struct ServerHelper {
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data {
                 
-                print("Data", String(data:data,encoding: .utf8))
+                //print("Data", String(data:data,encoding: .utf8))
                 
                 var decodedData : Decodable? = nil
                 

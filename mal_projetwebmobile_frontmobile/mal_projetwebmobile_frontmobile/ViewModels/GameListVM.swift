@@ -10,17 +10,17 @@ import Foundation
 enum GameListState {
     case ready
     case loading(String)
-    case loaded([Game])
+    case loaded(GameList)
     case loadingError(Error)
-    case new([GameVM])
+    case new(GameList)
     
     var description: String{
         switch self {
             case .ready                   : return "ready"
             case .loading(let s)          : return "loading: \(s)"
-            case .loaded(let games)     : return "loaded: \(games.count) editors"
+            case .loaded(let games)     : return "loaded: \(games) editors"
             case .loadingError(let error) : return "loadingError: Error loading -> \(error)"
-            case .new(let games) : return "games are ready \(games.count)"
+            case .new(let games) : return "games are ready \(games)"
         }
     }
 }
@@ -34,7 +34,7 @@ class GameListVM : ObservableObject{
             //data -- tableau d'editor
             switch self.gameListState {
             case .loaded(let data):
-                self.model.new(games: data)
+                self.model.new(games: data.games)
             case .loadingError:
                 print("LOADING ERROR")
             default:

@@ -16,7 +16,7 @@ class GameListViewIntent {
         self.gameList = gameList
     }
     
-    func httpJsonLoaded(result: Result<[Game],HttpRequestError>){
+    func httpJsonLoaded(result: Result<GameList,HttpRequestError>){
         switch result {
         case let .success(data):
        
@@ -28,7 +28,7 @@ class GameListViewIntent {
     
     func loadGameList(url: String) {
         gameList.gameListState = .loading(url)
-        //ServerHelper.loadGamesFromAPI(url: url, endofrequest: httpJsonLoaded)
+        ServerHelper.loadGamesFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
     
     

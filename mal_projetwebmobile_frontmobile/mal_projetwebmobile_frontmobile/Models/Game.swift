@@ -11,6 +11,7 @@ class Game : ObservableObject, Identifiable {
     
     private(set) var j_titre: String
     private(set) var j_duree: String
+    private(set) var j_ageMin : Int
     private(set) var j_nbMaxJoueur: Int
     private(set) var j_nbMinJoueurs: Int
     //private(set) var j_lienNotice: String
@@ -18,10 +19,11 @@ class Game : ObservableObject, Identifiable {
     private(set) var j_type : String
 
     
-    init(j_titre: String, j_duree: String ,j_nbMaxJoueur: Int, j_nbMinJoueurs: Int, /*j_lienNotice: String,*/ j_editor: String, j_type : String) {
+    init(j_titre: String, j_duree: String, j_ageMin : Int ,j_nbMaxJoueur: Int, j_nbMinJoueurs: Int, /*j_lienNotice: String,*/ j_editor: String, j_type : String) {
       
         self.j_titre = j_titre
         self.j_duree = j_duree
+        self.j_ageMin = j_ageMin
         self.j_nbMaxJoueur = j_nbMaxJoueur
         self.j_nbMinJoueurs = j_nbMinJoueurs
         //self.j_lienNotice = j_lienNotice

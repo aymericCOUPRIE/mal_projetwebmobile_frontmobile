@@ -22,6 +22,7 @@ struct HostingTabBar: View {
     @StateObject var festivalVM : FestivalVM = FestivalVM(Festival(date : "2000-00-00"))
     @StateObject var zoneListVM : ZoneListVM = ZoneListVM(ZoneList(zones: [Zone]()))
     @StateObject var editorListVM : EditorListVM = EditorListVM(EditorList(editors: [Editor]()))
+    @StateObject var gameList : GameListVM = GameListVM(gameList: GameList(games: [Game]()))
     
     var body: some View {
         TabView(selection: $selectedTab){
@@ -31,7 +32,7 @@ struct HostingTabBar: View {
                                Text("Acceuil")
                                Image(systemName: "house.fill")
                            }
-                      FestivalGameListView()
+                    FestivalGameListView(listGamesVM: self.gameList)
                            .tag(1)
                            .tabItem{
                                Text("Jeux")
