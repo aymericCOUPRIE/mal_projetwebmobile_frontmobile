@@ -318,8 +318,7 @@ struct ServerHelper {
         
         for sdata in data {
             for gdata in sdata.suivi_jeus {
-                
-                gdata.
+                games.append(Game(j_titre: gdata.jeu.j_titre, j_duree: gdata.jeu.j_duree, j_ageMin: gdata.jeu.j_ageMin, j_nbMaxJoueur: gdata.jeu.j_nbMaxJoueurs, j_nbMinJoueurs: gdata.jeu.j_nbMinJoueurs, j_editor: gdata.jeu.societe.soc_nom, j_type: gdata.jeu.type_jeu.typJ_libelle))
             }
         }
         
