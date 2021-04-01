@@ -56,7 +56,7 @@ struct EditorListView: View {
                          NavigationLink(
                             destination: EditorDetail(editor)
                         )
-                         */
+                        */
                         
                         EditorItem(EditorVM(editor))
                     }

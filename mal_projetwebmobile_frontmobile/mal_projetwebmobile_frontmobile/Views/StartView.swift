@@ -55,31 +55,33 @@ struct StartView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                WelcomeText()
-                LogoImage()
-                RDV(festivalVM : festivalVM)
-                
-                ErrorView(state: festivalState)
-                
-                /*
-                WhoAreYouText()
-               //lien vers page login si organisateur
-                Button(action: {
-                    viewRouter.currentPage = .loginView //je change la page courante dans le viewRouter
-                }){
-                    organisateurButtonContent()
-                }
-                //lien vers page???? si visiteur
-                Button(action: {
-                    viewRouter.currentPage = .loginView //A CHANGER !!!!!
+            ZStack{
+                VStack {
+                    WelcomeText()
+                    LogoImage()
+                    RDV(festivalVM : festivalVM)
+                    
+                    ErrorView(state: festivalState)
+                    
+                    /*
+                    WhoAreYouText()
+                   //lien vers page login si organisateur
+                    Button(action: {
+                        viewRouter.currentPage = .loginView //je change la page courante dans le viewRouter
+                    }){
+                        organisateurButtonContent()
+                    }
+                    //lien vers page???? si visiteur
+                    Button(action: {
+                        viewRouter.currentPage = .loginView //A CHANGER !!!!!
+                       
+                   }){
+                    visiteurButtonContent()
+                    }
+                     */
                    
-               }){
-                visiteurButtonContent()
-                }
-                 */
-               
-            }.padding()
+                }.padding()
+            }
            
             
         }

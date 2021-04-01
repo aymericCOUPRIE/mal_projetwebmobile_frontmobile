@@ -13,22 +13,27 @@ struct GameDetails: View {
     var game : Game
     
     var body: some View {
-        
-         VStack{
-        
-                Text("\(game.j_titre)")
-                 Spacer()
+         return VStack{
+            Group{
+            Text("\(game.j_titre)") .font(.largeTitle)
+                .fontWeight(.semibold)
+                .padding(.bottom, 20)
+                .foregroundColor(Color.init(red: 0/255, green: 32/255, blue: 101/255))
+                .padding(.top, 10)
             Spacer()
             Text("Editeur: \(game.j_editor)")
             Spacer()
             Text("Type de jeu: \(game.j_type)")
+            }
+            Group{
             Spacer()
-            //Text("A partir de \(game.)") age min
+            Text("À partir de \(game.j_ageMin)")
             Spacer()
             Text("Se joue entre : \(game.j_nbMinJoueurs) et \(game.j_nbMaxJoueur).")
             Spacer()
-            //Text("Durée d'une partie: \(game.j_duree)")
+            Text("Durée d'une partie: \(game.j_duree)")
             }
+        }
     }
 }
 
