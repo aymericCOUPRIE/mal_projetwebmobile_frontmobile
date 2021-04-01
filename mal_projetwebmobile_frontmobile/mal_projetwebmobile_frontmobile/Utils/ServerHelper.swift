@@ -319,7 +319,7 @@ struct ServerHelper {
         for sdata in data {
             for gdata in sdata.suivi_jeus {
                 
-                gdata.
+                //gdata.
             }
         }
         

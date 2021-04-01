@@ -12,6 +12,7 @@ import Combine
 
 struct EditorListView: View {
   
+    @State private var searchText = ""
 
     @ObservedObject var editorListVM : EditorListVM
     var intent : EditorListViewIntent
@@ -47,22 +48,32 @@ struct EditorListView: View {
  
     var body: some View {
     
-        VStack{
-            ZStack{
-                List{
-                    ForEach(editorListVM.model.editors){ editor in
-                        /*
-                         Plus tard quand on voudra voir le détail d'un éditeur -> la liste de tous ces jeux
-                         NavigationLink(
-                            destination: EditorDetail(editor)
-                        )
-                         */
+        
+        ZStack{
+            VStack{
+                
+                NavigationView {
+                    VStack {
+                        EditorTitlePage()
                         
-                        EditorItem(EditorVM(editor))
+                       SearchBar(text: $searchText)
+                            .padding(.top, -20)
+                        List{
+                            ForEach(editorListVM.model.editors.filter({ searchText.isEmpty ? true :
+                                $0.nomEditeur.lowercased().contains(searchText.lowercased())})){ editor in
+                        
+                                NavigationLink(
+                                    destination: GameListView(gameList: GameList(games: editor.games))
+                                ){
+                                    EditorItem(editor: editor)
+                                }
+                                
+                            }
+                        }
                     }
                 }
+                ErrorViewEditor(state: editorListState)
             }
-            //ErrorView(state: editorListState)
         }
     }
     
@@ -77,8 +88,8 @@ struct EditorListView_Previews: PreviewProvider {
 }
 */
  
-/*
-struct ErrorView : View{
+
+struct ErrorViewEditor : View{
     let state : EditorListState
     var body: some View{
         VStack{
@@ -94,13 +105,13 @@ struct ErrorView : View{
                 EmptyView()
             }
             if case let .loaded(data) = state{
-                Text("\(data.count) editors found!")
+                Text("\(data.editors.count) éditeur(s) trouvé(s)!")
             }
             Spacer()
         }
     }
 }
- */
+ 
 /*
 struct ErrorMessage : View{
     let error :  Error
@@ -126,3 +137,14 @@ struct ErrorMessage : View{
 }
  */
 
+
+struct EditorTitlePage : View {
+    var body: some View{
+        return Text("Editeurs du festival")
+            .font(.largeTitle)
+            .fontWeight(.semibold)
+            .padding(.bottom, 20)
+            .foregroundColor(Color.init(red: 0/255, green: 32/255, blue: 101/255))
+            .padding(.top, 10)
+    }
+}

@@ -9,11 +9,7 @@ import SwiftUI
 
 struct EditorItem: View {
     
-    var editor : EditorVM
-    
-    init(_ editor: EditorVM) {
-        self.editor = editor
-    }
+    var editor : Editor
     
     var body: some View {
         VStack{
@@ -21,17 +17,18 @@ struct EditorItem: View {
                 Text(editor.nomEditeur)
                 Spacer()
             }
-            HStack{
-                Text("\(editor.nomEditeur)") //différent de la ligne du dessus car c'est un int
-                Spacer()
+            HStack {
+                Text("Nombre de jeux: \(editor.games.count)")
             }
             
         }
     }
 }
 
+/*
 struct EditorItem_Previews: PreviewProvider {
     static var previews: some View {
         EditorItem(EditorVM(Editor(nomEditeur: "Hasbro", games: [Game]())))
     }
 }
+*/
